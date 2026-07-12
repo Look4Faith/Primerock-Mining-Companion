@@ -1,0 +1,62 @@
+{
+  "source": "Primerock Mining Companion",
+  "lastUpdated": "2026-07-12",
+  "note": "Bundled mining & gold industry news. Refreshes from free remote JSON when online.",
+  "items": [
+    {
+      "id": "news-001",
+      "title": "FGR publishes daily gold buying category prices",
+      "summary": "Fidelity Gold Refinery continues to publish SG-band and Fire Assay Cash rates in USD per gram and per ounce for Zimbabwe producers.",
+      "body": "Fidelity Gold Refinery (FGR) remains Zimbabwe’s official buyer, refiner and exporter of gold. Daily buying sheets typically list Specific Gravity (SG) bands from 75% upward, a small-sample rate, and Fire Assay Cash for larger parcels.\n\nPrimerock Mining Companion mirrors these categories for planning. Always confirm the current sheet at an FGR buying centre or via FGR’s official channels before delivery.\n\nPayment models commonly referenced by FGR include Cash (USD) and Hybrid (60% Nostro / 40% local currency).",
+      "category": "Gold Prices",
+      "date": "2026-07-10",
+      "sourceName": "Primerock brief",
+      "sourceUrl": "https://fgr.co.zw/",
+      "tags": ["FGR", "gold", "prices"]
+    },
+    {
+      "id": "news-002",
+      "title": "Why fire assay still matters for Fidelity deliveries",
+      "summary": "Miners choosing fire assay over spot SG get tighter purity certainty — useful for disputes and joint-venture accounting.",
+      "body": "Specific gravity methods are fast and widely used at decentralised buying centres. Fire assay, performed after melting and sampling, remains the reference technique when tolerances matter.\n\nFGR notes that fire assay results are typically within about one part per thousand. For parcels above 100g, Fire Assay Cash often applies with no sample deduction; transfer pricing may deduct a sample of not more than 10g.\n\nPrimerock Solutions offers independent fire assay and AAS support from Mutare so producers can check grades before or after formal delivery.",
+      "category": "Laboratory",
+      "date": "2026-07-08",
+      "sourceName": "Primerock Solutions",
+      "sourceUrl": "",
+      "tags": ["assay", "laboratory", "FGR"]
+    },
+    {
+      "id": "news-003",
+      "title": "Eastern Highlands producers: sampling tips before Mutare drop-off",
+      "summary": "Good sealing, unique IDs and dry-basis moisture notes reduce disputes and speed certificates.",
+      "body": "Bring clearly labelled, sealed samples to 3 Milton Road, Fairbridge Park, Mutare. Record wet weight, estimated moisture, and the question you need answered (head grade, tails, carbon loading, cyanide residual, etc.).\n\nIf you are courier-sending from outside Manicaland, photograph the seal and keep a retained split. Primerock can advise on mass required for fire assay versus AAS solution work.\n\nBook a consultation via the app’s Booking screen — it opens WhatsApp with your details pre-filled.",
+      "category": "Mining Tips",
+      "date": "2026-07-05",
+      "sourceName": "Primerock Solutions",
+      "sourceUrl": "",
+      "tags": ["sampling", "Mutare", "tips"]
+    },
+    {
+      "id": "news-004",
+      "title": "CIL/CIP recovery: watch tails grade and carbon activity",
+      "summary": "Small changes in grind, cyanide and carbon health often move recovery more than miners expect.",
+      "body": "Recovery % ≈ (feed − tails) / feed × 100. If tails stay high while feed is healthy, check grind size, dissolved oxygen, free cyanide, pH, and activated carbon activity.\n\nPreg-robbing ores and fine carbon losses are common Zimbabwe plant issues. Laboratory checks on carbon gold loading and slurry chemistry help isolate the bottleneck before you change the whole circuit.\n\nUse the in-app Recovery and Cyanide calculators, then book Primerock process support if numbers do not add up.",
+      "category": "Metallurgy",
+      "date": "2026-07-01",
+      "sourceName": "Primerock Solutions",
+      "sourceUrl": "",
+      "tags": ["CIL", "CIP", "recovery"]
+    },
+    {
+      "id": "news-005",
+      "title": "Gold market context: live benchmarks and producer planning",
+      "summary": "FGR has moved toward live morning global benchmarks for daily fixed pricing — producers should refresh rates often.",
+      "body": "Industry reporting notes FGR’s shift toward live morning spot benchmarks for daily fixed prices, instead of relying only on the previous close. That makes same-day confirmation more important for delivery decisions.\n\nThe Companion app stores the latest known category sheet offline and can refresh from a free GitHub-hosted JSON when your phone has data.\n\nPull to refresh on the Gold Prices screen after connecting to Wi‑Fi.",
+      "category": "Industry",
+      "date": "2026-06-28",
+      "sourceName": "Industry brief",
+      "sourceUrl": "https://fgr.co.zw/",
+      "tags": ["market", "FGR", "benchmark"]
+    }
+  ]
+}

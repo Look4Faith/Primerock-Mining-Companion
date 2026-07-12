@@ -1,0 +1,180 @@
+{
+  "companyName": "Primerock Solutions",
+  "tagline": "Accredited mining laboratory and process support for Zimbabwe",
+  "about": "Primerock Solutions is a Zimbabwe-based mining services company supporting artisanal miners, custom milling plants, and mid-tier operators across the country's gold belts. From our laboratory at 3 Milton Road, Fairbridge Park, Mutare—with sample support for Manicaland and clients further afield—we deliver fire assay, AAS analysis, moisture and particle size testing, carbon diagnostics, and cyanide-related analytical services.\n\nWe built the Primerock Mining Companion app so miners can access educational content, Fidelity gold price reference data, and laboratory information even when connectivity is poor. Our team combines practical plant experience with ISO-aligned laboratory practices, producing certificates suitable for Fidelity deliveries, joint-venture accounting, and environmental monitoring.\n\nWhether you are milling in the Eastern Highlands, developing a deposit in Midlands, or improving recovery at a CIL plant, Primerock is structured to be a long-term technical partner—not just a one-off assay shop.",
+  "services": [
+    {
+      "id": "svc-assay",
+      "name": "Gold Fire Assay",
+      "description": "Reference-grade gold determination in rock, drill core, concentrate, and doré using fire assay with gravimetric or instrumental finish. Includes standard QAQC (blanks, duplicates, CRMs).",
+      "icon": "science",
+      "turnaround": "2–5 working days standard; express available"
+    },
+    {
+      "id": "svc-aas",
+      "name": "AAS Gold Analysis",
+      "description": "Rapid gold in solution for leach liquors, tailings leachates, eluates, and exploration soils after appropriate digestion.",
+      "icon": "analytics",
+      "turnaround": "24–48 hours for routine batches"
+    },
+    {
+      "id": "svc-moisture",
+      "name": "Moisture Content",
+      "description": "Oven-dry moisture on ore, concentrate, and tailings for accurate tonnage and dry-basis grade reporting.",
+      "icon": "water_drop",
+      "turnaround": "Same day for small batches"
+    },
+    {
+      "id": "svc-psd",
+      "name": "Particle Size Distribution",
+      "description": "Wet or dry sieving and laser diffraction to optimise grind size before leaching or flotation.",
+      "icon": "grain",
+      "turnaround": "1–3 working days"
+    },
+    {
+      "id": "svc-carbon",
+      "name": "Activated Carbon Testing",
+      "description": "Gold loading, activity indicators, and fines assessment to troubleshoot CIL/CIP recovery losses.",
+      "icon": "filter_alt",
+      "turnaround": "2–4 working days"
+    },
+    {
+      "id": "svc-cyanide",
+      "name": "Cyanide & WAD Testing",
+      "description": "Weak acid dissociable cyanide and related support for tailings management and environmental reporting.",
+      "icon": "warning",
+      "turnaround": "3–5 working days"
+    },
+    {
+      "id": "svc-ph",
+      "name": "pH & Basic Process Water",
+      "description": "Slurry and process water pH, alkalinity checks, and paired sampling with metallurgical programmes.",
+      "icon": "opacity",
+      "turnaround": "24 hours when bundled with plant visits"
+    },
+    {
+      "id": "svc-sampling",
+      "name": "Sampling Support & Training",
+      "description": "On-site sampling protocol design, sealed sample kits, chain-of-custody training, and referee sampling for disputes.",
+      "icon": "inventory",
+      "turnaround": "Scheduled site visits"
+    },
+    {
+      "id": "svc-consult",
+      "name": "Process & Recovery Reviews",
+      "description": "Mass balance reconciliation, CIL/CIP troubleshooting, and practical recommendations for Zimbabwe operating conditions.",
+      "icon": "engineering",
+      "turnaround": "Project-based"
+    }
+  ],
+  "whyChooseUs": [
+    {
+      "title": "Built for Zimbabwe conditions",
+      "body": "We understand rain-affected stockpiles, generator-powered mills, variable grid power, and Fidelity settlement workflows—not textbook-only scenarios."
+    },
+    {
+      "title": "Certificates you can present with confidence",
+      "body": "Clear method codes, sample IDs, QAQC notes, and contact details on every report for buyers, partners, and regulators."
+    },
+    {
+      "title": "Fast communication",
+      "body": "WhatsApp and phone updates when samples arrive and when certificates issue—important when you are waiting to deliver gold."
+    },
+    {
+      "title": "Education-first approach",
+      "body": "We explain results in plain language so shift bosses and mine owners can act, not just archive PDFs."
+    },
+    {
+      "title": "Harare lab, national reach",
+      "body": "Based in Mutare (Fairbridge Park) with coordinated sample support across Manicaland and major gold-producing centres."
+    },
+    {
+      "title": "Offline-friendly companion app",
+      "body": "This app bundles articles, Q&A, and sample gold prices so your team learns between lab visits."
+    }
+  ],
+  "processSteps": [
+    {
+      "step": 1,
+      "title": "Contact & scope",
+      "description": "Call, WhatsApp, or email with your sample type, estimated grades, and required turnaround. We confirm method, cost estimate, and sampling advice."
+    },
+    {
+      "step": 2,
+      "title": "Sample & dispatch",
+      "description": "Seal and label samples with unique IDs. Deliver to our Mutare laboratory at 3 Milton Road, Fairbridge Park, or arrange courier handover from mining centres."
+    },
+    {
+      "step": 3,
+      "title": "Lab reception & prep",
+      "description": "We log condition on arrival, crush and split to protocol, and insert QAQC samples through preparation and analysis."
+    },
+    {
+      "step": 4,
+      "title": "Analysis & review",
+      "description": "Fire assay, AAS, or other requested tests run by trained analysts with supervisor review before release."
+    },
+    {
+      "step": 5,
+      "title": "Certificate & support",
+      "description": "PDF certificate issued via email/WhatsApp. Optional call to interpret results and recommend next tests or plant actions."
+    }
+  ],
+  "faqs": [
+    {
+      "question": "Where is the Primerock laboratory located?",
+      "answer": "Our laboratory is at 3 Milton Road, Fairbridge Park, Mutare, Zimbabwe. Sample drop-off is weekdays 08:00–16:30; call ahead for after-hours reception on express jobs."
+    },
+    {
+      "question": "Do you accept samples from Bulawayo and other towns?",
+      "answer": "Yes. We coordinate scheduled sample collection from Bulawayo and major gold-producing areas. Contact us for the next run date and packaging requirements."
+    },
+    {
+      "question": "How much sample mass do you need for fire assay?",
+      "answer": "Typically 1–2 kg per lot for homogenisation, with a 30–50 g subsample fused for fire assay. High-nuggety material may need larger composites—ask before dispatch."
+    },
+    {
+      "question": "How long until I receive results?",
+      "answer": "Standard fire assay batches: 2–5 working days. Routine AAS: 24–48 hours. Express options available when capacity allows—confirm at booking."
+    },
+    {
+      "question": "Can you help if my result disagrees with a buyer's assay?",
+      "answer": "Yes. We offer referee testing on retained pulp or sealed splits, documented chain of custody, and blind duplicate analysis where agreed by both parties."
+    },
+    {
+      "question": "Do you visit sites for sampling training?",
+      "answer": "Yes. Supervisors and geology teams can book half-day or full-day sampling workshops covering channel sampling, splitting, and labelling for Fidelity-ready parcels."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "USD cash, bank transfer, and mobile money arrangements for registered clients. New clients may be asked for deposit on large batches—confirm at quote stage."
+    },
+    {
+      "question": "Is Primerock the same as Fidelity Gold Refinery?",
+      "answer": "No. Primerock Solutions is an independent laboratory and consulting service. Fidelity sets national buying prices and refines gold; we test and advise miners before and after delivery."
+    },
+    {
+      "question": "Can you test tailings for cyanide?",
+      "answer": "Yes. We offer WAD cyanide and related tailings characterisation packages. Sample containers and preservation steps must be followed—request our tailings sampling sheet."
+    },
+    {
+      "question": "Does this app replace official Fidelity prices?",
+      "answer": "No. Gold prices in the app reference Fidelity Gold Refinery (FGR) buying categories for planning. Always confirm the current FGR sheet at https://fgr.co.zw/ or at a buying centre before delivery. When online, the app can refresh from a free curated JSON mirror."
+    }
+  ],
+  "contact": {
+    "phone": "+263771437248",
+    "whatsapp": "+263771437248",
+    "email": "primerocksolutions@gmail.com",
+    "address": "3 Milton Road, Fairbridge Park, Mutare, Zimbabwe",
+    "mapsQuery": "3+Milton+Road+Fairbridge+Park+Mutare",
+    "hours": "Monday–Friday 08:00–16:30; Saturday by appointment",
+    "serviceAreas": [
+      "Mutare & Manicaland",
+      "Eastern Highlands gold areas",
+      "Harare & Mashonaland (sample courier)",
+      "Midlands custom milling hubs"
+    ]
+  },
+  "bulawayoNote": "Clients outside Mutare: contact us to arrange sample courier or handover. Full preparation and analysis is performed at the Fairbridge Park laboratory unless otherwise quoted."
+}

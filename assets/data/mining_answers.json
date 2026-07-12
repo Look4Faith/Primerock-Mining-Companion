@@ -1,0 +1,158 @@
+{
+  "suggestedQuestions": [
+    "What is a gold assay?",
+    "How does AAS gold analysis work?",
+    "What is the difference between CIL and CIP?",
+    "How do I handle cyanide safely on site?",
+    "Why should I test slurry pH during leaching?",
+    "What does ore moisture content affect?",
+    "How do I check activated carbon activity?",
+    "What is gold recovery rate?",
+    "How do I interpret gold grade in g/t?",
+    "Why test cyanide residual in tailings?",
+    "What is slurry density and why measure it?",
+    "How does Fidelity set gold buying prices?",
+    "What are good ore sampling tips for small-scale miners?",
+    "How can Primerock Solutions help my operation?",
+    "What particle size is best before cyanidation?"
+  ],
+  "answers": [
+    {
+      "id": "assay",
+      "keywords": ["assay", "gold assay", "fire assay", "aas", "laboratory", "sample"],
+      "question": "What is a gold assay?",
+      "answer": "A gold assay is a laboratory test that measures how much gold is present in a rock, ore, soil, or concentrate sample. For Zimbabwean miners, assay results are usually reported in grams per tonne (g/t) or parts per million (ppm). Fire assay is the traditional reference method: the sample is fused with flux, the gold is collected into a lead button, and the final gold bead is weighed. Assay results help you decide whether material is worth processing, how to blend ore batches, and what price to expect when selling to Fidelity Gold Refinery or other buyers. Always use a representative sample—poor sampling is the most common reason assay results do not match what you see on the ground. Primerock Solutions provides accredited assay services with clear certificates suitable for due diligence and buyer negotiations.",
+      "relatedService": "Gold Assay",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "aas",
+      "keywords": ["aas", "atomic absorption", "gold analysis", "solution", "ppm", "lab test"],
+      "question": "How does AAS gold analysis work?",
+      "answer": "Atomic Absorption Spectroscopy (AAS) measures gold concentration in a liquid solution after the sample has been dissolved or leached into acid. A lamp emits light at a gold-specific wavelength, and the instrument detects how much light the solution absorbs—more gold means more absorption. AAS is faster and lower-cost than fire assay for many routine checks, making it useful for process monitoring, tailings checks, and comparing batches before full fire assay confirmation. In Zimbabwe, AAS is widely used in labs serving small-scale and artisanal miners who need quick turnaround. Samples must be properly digested (often aqua regia for gold) and calibrated against known standards. AAS works best when your lab follows strict preparation steps and reports detection limits clearly.",
+      "relatedService": "AAS Analysis",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "cil",
+      "keywords": ["cil", "carbon in leach", "leaching", "carbon", "tank", "recovery"],
+      "question": "What is CIL (Carbon-in-Leach)?",
+      "answer": "Carbon-in-Leach (CIL) is a gold recovery process where activated carbon is added directly into the agitated leach tanks while cyanide dissolves the gold. As gold forms aurocyanide complexes in solution, the carbon adsorbs the gold from the slurry in the same tank. CIL suits ores that leach quickly and plants that want fewer tanks than a separate leach-then-adsorption circuit. Key operating variables include cyanide concentration, dissolved oxygen, pH, slurry density, carbon activity, and residence time. Poor carbon management—fines, fouling, or exhausted carbon—is a common reason for low recovery in Zimbabwe CIL operations. Regular carbon activity tests and elution monitoring help keep recovery stable.",
+      "relatedService": "Process Consulting",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "cip",
+      "keywords": ["cip", "carbon in pulp", "adsorption", "leach", "gold recovery"],
+      "question": "What is CIP (Carbon-in-Pulp) and how is it different from CIL?",
+      "answer": "Carbon-in-Pulp (CIP) uses separate leaching and adsorption stages. Ore is leached in tanks first; the gold-bearing solution is then pumped to CIP tanks where activated carbon adsorbs the gold. CIL combines leaching and adsorption in the same tanks. CIP can be easier to control when leaching kinetics are slow or when you need to protect carbon from preg-robbing ore. Both circuits depend on healthy carbon, correct cyanide levels, and good oxygen supply. The choice between CIL and CIP depends on ore type, plant layout, and recovery targets—not on which name sounds simpler. Lab testing of leach kinetics and preg-robbing behaviour helps select the right flowsheet.",
+      "relatedService": "Process Consulting",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "cyanide_safety",
+      "keywords": ["cyanide", "safety", "hazmat", "spill", "nacn", "protective equipment", "tailings"],
+      "question": "How do I handle cyanide safely on a mining site?",
+      "answer": "Cyanide is effective for gold leaching but must be treated as a serious hazard. Store sodium cyanide (NaCN) in a locked, dry, labelled area away from acids—mixing cyanide with acid releases hydrogen cyanide gas. Workers need training, gloves, goggles, and respiratory protection when handling solid cyanide or working near open tanks. Never eat, drink, or smoke in cyanide areas. Install clear signage, eyewash stations, and spill kits with calcium hypochlorite or other approved neutralising agents. Monitor pH in leach tanks (typically 10–11) to minimise HCN gas formation. Tailings must be detoxified or managed according to your environmental plan before discharge. Primerock can advise on residual cyanide testing and safe laboratory handling procedures aligned with Zimbabwe environmental expectations.",
+      "relatedService": "Cyanide Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "ph_testing",
+      "keywords": ["ph", "alkalinity", "lime", "leach", "slurry", "hydrogen cyanide"],
+      "question": "Why should I test slurry pH during leaching?",
+      "answer": "pH controls how much cyanide stays as safe, effective CN⁻ versus forming hydrogen cyanide (HCN) gas at low pH. Most gold leach circuits target pH 10.0–11.0 using lime or caustic soda. If pH drops—often because of acidic ore or insufficient lime—you risk lower gold dissolution, carbon fouling, and unsafe HCN emissions. High pH can waste reagents without improving recovery. Test pH on-site with a calibrated meter or reliable test strips, and confirm critical samples in the lab. Track pH together with cyanide concentration and dissolved oxygen to diagnose poor recovery quickly instead of guessing which reagent to add.",
+      "relatedService": "pH & Process Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "moisture",
+      "keywords": ["moisture", "water content", "drying", "tonnage", "weight", "ore"],
+      "question": "What does ore moisture content affect?",
+      "answer": "Moisture content is the percentage of water in an ore sample, usually measured by drying a known weight to constant mass in an oven. High moisture makes wet ore heavier, so tonnage and grade calculations can be wrong if you do not adjust for it. Moisture affects crushing efficiency, dust control, transport costs, and how cyanide and lime distribute in the slurry. In Zimbabwe's rainy season, stockpiles can gain significant surface moisture within hours. For fair sales and accurate plant accounting, report dry basis grade where possible and always note moisture on dispatch certificates. Primerock offers moisture determination as part of routine ore characterisation.",
+      "relatedService": "Moisture Analysis",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "carbon",
+      "keywords": ["carbon", "activated carbon", "activity", "elution", "adsorption", "fouling"],
+      "question": "How do I check activated carbon activity?",
+      "answer": "Activated carbon adsorbs gold from cyanide solution; when its activity drops, gold loads onto fresh carbon poorly and recovery falls. Signs of tired carbon include high barren solution grades, visible fines, organic fouling, and long elution times. Activity is checked using laboratory methods such as iodine number, gold loading tests, or comparison against fresh carbon under standard conditions. Replace or regenerate carbon before recovery collapses—waiting until elution is failing is expensive. Keep carbon wet, minimise mechanical breakage, and screen out fines regularly. Primerock can test carbon samples and help interpret whether fouling or exhaustion is the main problem.",
+      "relatedService": "Carbon Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "recovery",
+      "keywords": ["recovery", "percent recovery", "mass balance", "plant performance", "yield"],
+      "question": "What is gold recovery rate?",
+      "answer": "Gold recovery is the percentage of gold in the feed that ends up in the final product (doré, concentrate, or bullion). It is calculated from mass balance: compare gold in feed versus gold in products and losses to tailings. For example, if feed contains 100 g of gold and tailings plus unaccounted losses contain 25 g, recovery is 75%. Recovery depends on grind size, leach time, cyanide and oxygen levels, preg-robbing minerals, and carbon or concentrate handling. Zimbabwe operations often lose gold through poor sampling, security gaps, and unmeasured tailings. Regular tailings assays and reconciliation meetings prevent surprises at month-end.",
+      "relatedService": "Recovery Audits",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "grade",
+      "keywords": ["grade", "g/t", "grams per tonne", "ppm", "head grade", "cut-off"],
+      "question": "How do I interpret gold grade in g/t?",
+      "answer": "Gold grade tells you how many grams of gold are present in one tonne (1,000 kg) of material. A grade of 3 g/t means one tonne of ore contains about 3 grams of gold on average. Very high-grade pockets can reach hundreds of g/t, but mill feed is usually blended to a stable head grade. Compare grade to your processing cost, recovery, and the Fidelity buying price per gram to estimate profitability. Always ask whether reported grades are dry or wet basis and whether they come from drill cores, channel samples, or bulk parcels—each has different reliability. Fire assay with proper QAQC remains the standard for high-confidence grade reporting in Zimbabwe.",
+      "relatedService": "Gold Assay",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "particle_size",
+      "keywords": ["particle size", "grind", "p80", "milling", "liberation", "mesh"],
+      "question": "What particle size is best before cyanidation?",
+      "answer": "Gold must be liberated from the surrounding rock for cyanide to reach it. Finer grinding increases liberation but costs more energy and can create slimes that slow leaching. Many hard-rock operations target a P80 between 75 µm and 150 µm, but the right size comes from test work on your ore—not a fixed rule. If gold is locked in sulphides, fine grinding alone may not help until you roast or float first. Use screen analysis or lab grind tests and correlate with recovery. In artisanal settings, over-crushing can produce excessive fines that clog screens and reduce leach kinetics.",
+      "relatedService": "Particle Size Analysis",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "fidelity_prices",
+      "keywords": ["fidelity", "gold price", "buying price", "usd per gram", "zig", "refinery"],
+      "question": "How does Fidelity set gold buying prices?",
+      "answer": "Fidelity Gold Refinery (FGR), a subsidiary of the Reserve Bank of Zimbabwe, publishes buying prices for gold delivered by licensed dealers and miners. Prices track international bullion markets but are quoted in USD per gram (and often ZIG equivalents) for local settlement. The buying price is typically below the international spot equivalent because it reflects refining, logistics, and policy margins. Prices can change daily; this app shows bundled sample data offline and refreshes when sync succeeds. When planning a delivery, check the latest Fidelity quote, your assay certificate, and any dealer fees so you know your net return before transport.",
+      "relatedService": "Gold Assay",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "slurry_density",
+      "keywords": ["slurry density", "percent solids", "pulp density", "leach tank", "viscosity"],
+      "question": "What is slurry density and why measure it?",
+      "answer": "Slurry density describes how much solid ore is suspended in water, often reported as percent solids (% w/w) or specific gravity. Leach tanks usually run between 40% and 50% solids depending on ore type and agitation power. Too low: tanks fill with water, reducing residence time and increasing reagent cost. Too high: poor mixing, dead zones, and impeller overload. Measure density with a Marcy scale, on-line density meter, or lab oven moisture paired with known pulp volume. Stable density helps reproduce leach results shift to shift—important when multiple operators work the same circuit in Kadoma, Kwekwe, or Bulawayo custom milling plants.",
+      "relatedService": "Process Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "cyanide_residual",
+      "keywords": ["cyanide residual", "tailings", "wadt", "detox", "environment", "weak acid dissociable"],
+      "question": "Why test cyanide residual in tailings?",
+      "answer": "After leaching, tailings still contain cyanide compounds that can harm wildlife and waterways if discharged untreated. Residual cyanide testing—often WAD (weak acid dissociable) cyanide—shows whether detoxification (e.g., SO₂/air, hydrogen peroxide, or natural degradation) has reached safe levels. Zimbabwe environmental inspectors and community stakeholders increasingly expect documented tailings results, not verbal assurances. Testing also protects workers reclaiming ponds or building tailings dams. Combine cyanide residual data with pH and metal assays to design responsible closure plans. Primerock provides cyanide-related analytical support for due diligence and environmental monitoring.",
+      "relatedService": "Cyanide Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "primerock_help",
+      "keywords": ["primerock", "primerock solutions", "laboratory", "help", "services", "harare", "bulawayo"],
+      "question": "How can Primerock Solutions help my mining operation?",
+      "answer": "Primerock Solutions is a Zimbabwe-focused mining services company supporting artisanal, small-scale, and mid-tier operators with laboratory testing, process advice, and practical training. We offer gold fire assay and AAS, moisture and particle size analysis, carbon activity checks, cyanide-related testing, and recovery reconciliation support. Our team understands local conditions—from Kadoma custom mills to Bulawayo processing startups—and delivers certificates you can present to buyers, investors, and regulators. Use this app for offline education and price reference, then contact our lab when you need accredited results, sample collection, or help interpreting plant problems.",
+      "relatedService": "Laboratory Services",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "sampling_tips",
+      "keywords": ["sampling", "sample collection", "representative", "channel sample", "chip tray", "qaqc"],
+      "question": "What are good ore sampling tips for small-scale miners?",
+      "answer": "Reliable assays start with representative sampling. Do not assay only the shiny pieces—high-grade nuggets bias results upward. For faces and stockpiles, take channel samples or incremental shovel cuts across the full width of material. Combine many small increments into one composite, mix thoroughly, and split down using riffle splitters or coning-and-quartering. Label every bag with location, date, depth, and your initials before transport to the lab. Keep a retained duplicate in case of disputes. Avoid wetting samples with dirty water and never store samples in acid-contaminated containers. Primerock can supply sampling guidance and sealed sample kits for chain-of-custody confidence.",
+      "relatedService": "Sampling Support",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    },
+    {
+      "id": "preg_robbing",
+      "keywords": ["preg-robbing", "preg robbing", "carbonaceous", "organic", "recovery loss"],
+      "question": "What is preg-robbing and how does it affect recovery?",
+      "answer": "Preg-robbing ores contain organic carbon or certain clay minerals that adsorb gold cyanide complexes from solution before activated carbon can capture them—effectively 'robbing' gold from your circuit. Symptoms include good leach tests in bottle rolls but poor plant recovery, or high barren solution grades despite fresh carbon. Common in some Zimbabwe shear-zone ores. Mitigation options include blinding organic carbon with kerosene or CMCI-type additives, pre-aeration, flotation, roasting, or switching flowsheet design. Identify preg-robbing early with diagnostic leach tests rather than repeatedly increasing cyanide dose, which raises cost and risk without fixing the root cause.",
+      "relatedService": "Diagnostic Leach Testing",
+      "cta": "Primerock Solutions offers accredited gold assay services. Visit Laboratory for details."
+    }
+  ],
+  "fallback": "I don't have a specific answer for that yet. Try asking about assays, CIL/CIP, cyanide, pH, recovery, or gold grade. For lab testing, Primerock Solutions can help — see the Laboratory section."
+}

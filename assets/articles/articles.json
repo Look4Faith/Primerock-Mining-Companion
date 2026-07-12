@@ -1,0 +1,196 @@
+{
+  "categories": [
+    "Gold Assay",
+    "AAS",
+    "CIL",
+    "CIP",
+    "Activated Carbon",
+    "Cyanide Safety",
+    "pH Testing",
+    "Particle Size",
+    "Mining Tips",
+    "Laboratory Practices"
+  ],
+  "articles": [
+    {
+      "id": "art-001",
+      "title": "Understanding Fire Assay for Zimbabwe Gold Ores",
+      "category": "Gold Assay",
+      "summary": "Fire assay remains the gold standard for measuring gold grade in rock and concentrate. Learn how the method works and when to request it.",
+      "content": "Fire assay has been used for centuries because it reliably concentrates gold from large samples into a measurable bead. For Zimbabwe miners selling to Fidelity or export buyers, a fire assay certificate on representative material is often the document that closes a deal.\n\nThe process begins with crushing and splitting your sample to a fine pulp. A weighed subsample is mixed with fluxes (borax, silica, soda ash, and litharge) and fused in a furnace near 1,100°C. Base metals form a slag while gold and silver collect in a lead button. The lead is cupelled to leave a precious metal bead, which is parted and weighed or finished by gravimetry or instrumental methods.\n\nFire assay excels at low detection limits and high precision for gold-rich materials, but it is slower and more expensive than AAS. Use fire assay for formal grade disputes, resource reporting, and concentrate settlements. Pair every assay program with blanks, duplicates, and standards so you can trust the numbers.\n\nPrimerock Solutions runs fire assay with documented QAQC and turnaround suited to mining calendars in Harare, Bulawayo, and field dispatch from major gold belts.",
+      "readMinutes": 5,
+      "imageHint": "assay_lab",
+      "tags": ["assay", "gold", "fire assay", "laboratory"]
+    },
+    {
+      "id": "art-002",
+      "title": "Reading Your Assay Certificate: A Miner's Checklist",
+      "category": "Gold Assay",
+      "summary": "An assay certificate is a contract in numbers. Know which fields to verify before you accept a grade or negotiate price.",
+      "content": "Every assay certificate should identify the client, sample ID, date received, method used, and reported gold value with units (g/t or ppm). Check that sample IDs match your physical bags and field logbook—mix-ups still happen during busy delivery weeks.\n\nLook for moisture basis notes. Some certificates report dry weight; others report as-received. A 2 g/t result on wet ore is not the same economic story as 2 g/t dry. Detection and upper limits matter too: if gold exceeds the calibration range, the lab should have diluted and re-run.\n\nQAQC attachments may list duplicate precision and standard reference material recovery. Good labs recover standards within about ±5% for gold. Ask for rerun policy if you dispute results; keep a sealed referee sample until settlement.\n\nPrimerock certificates include clear contact details and method codes so Fidelity dealers and technical partners can verify results quickly.",
+      "readMinutes": 4,
+      "imageHint": "certificate",
+      "tags": ["assay", "certificate", "grade"]
+    },
+    {
+      "id": "art-003",
+      "title": "AAS for Rapid Gold Analysis in Process Control",
+      "category": "AAS",
+      "summary": "Atomic Absorption Spectroscopy gives fast gold results in solution—ideal for checking leach performance and tailings.",
+      "content": "AAS instruments measure gold in liquid samples after digestion, typically with aqua regia or cyanide leach solutions for specific test protocols. Turnaround can be hours instead of days, which helps plant operators decide whether to extend leach time or adjust cyanide.\n\nCalibration is everything. Labs use gold standard solutions at multiple concentrations and check drift during each analytical run. Samples with high copper, iron, or suspended solids may need dilution or filtration to avoid burner clogging and false readings.\n\nAAS is excellent for trend monitoring—comparing Monday versus Friday barren solutions—but fire assay may still be required for final doré or concentrate accounting. Use both methods strategically rather than treating them as interchangeable.\n\nPrimerock offers AAS gold analysis with clear reporting of detection limits so you know when a 'below detection' result truly means negligible gold.",
+      "readMinutes": 4,
+      "imageHint": "aas_instrument",
+      "tags": ["aas", "analysis", "process control"]
+    },
+    {
+      "id": "art-004",
+      "title": "When to Choose AAS Versus Fire Assay",
+      "category": "AAS",
+      "summary": "Speed, cost, and confidence level differ between AAS and fire assay. Match the method to your decision.",
+      "content": "Choose AAS when you need frequent, lower-cost checks: leach liquor grades, tailings screening, carbon strip solutions, and exploration soil grids with moderate grade. The method assumes gold is fully brought into solution during digestion—refractory minerals can under-report if digestion is incomplete.\n\nChoose fire assay when stakes are high: concentrate sales, partnership splits, legal disputes, and year-end reconciliation. Fire assay physically pre-concentrates gold, reducing interference from complex matrices.\n\nMany Zimbabwe operations use AAS weekly and fire assay monthly for head and tail composites. That rhythm balances cost with audit confidence. Document which method supports each decision so teams do not argue from incompatible datasets.\n\nPrimerock consultants can help design a testing schedule aligned with your plant size and delivery calendar.",
+      "readMinutes": 3,
+      "imageHint": "lab_choice",
+      "tags": ["aas", "fire assay", "testing strategy"]
+    },
+    {
+      "id": "art-005",
+      "title": "CIL Circuit Basics for Custom Milling Plants",
+      "category": "CIL",
+      "summary": "Carbon-in-Leach combines cyanidation and adsorption in one tank train. Here is how to keep it stable.",
+      "content": "In a CIL plant, ore slurry enters a series of mechanically agitated tanks with cyanide, lime, and activated carbon. Gold dissolves and loads onto carbon simultaneously. Carbon advances counter-current to slurry flow so the freshest carbon contacts the lowest-grade solution, maximising loading.\n\nOperating targets include pH 10–11, dissolved oxygen above roughly 8 mg/L in many circuits, and cyanide maintained per metallurgical test work—not guessed. Screen carbon every shift to remove fines that steal gold but cannot be eluted efficiently.\n\nCommon Zimbabwe pitfalls: running tanks too full during rains (density drops), starving oxygen with old blowers, and delaying carbon regeneration until recovery collapses. Daily measurements of tailings grade plus weekly carbon activity catch problems early.\n\nPrimerock supports CIL troubleshooting with tailings assays, carbon tests, and practical training for shift bosses.",
+      "readMinutes": 5,
+      "imageHint": "cil_tanks",
+      "tags": ["cil", "leaching", "carbon"]
+    },
+    {
+      "id": "art-006",
+      "title": "Optimising Leach Residence Time in CIL",
+      "category": "CIL",
+      "summary": "Residence time must match your ore's leach kinetics. Too short wastes gold; too long wastes power and cyanide.",
+      "content": "Residence time is the average hours slurry spends in the leach train. Fast-leaching oxide ore may need only 12–24 hours; sulphide-heavy material may need 48 hours or more. Bottle roll tests at lab scale simulate this before you rebuild tanks.\n\nMeasure tailings grade from the final tank daily. If tailings remain elevated while barren solution grades are low, leach chemistry may be fine but carbon activity is poor. If both are high, you likely need more time, finer grind, or higher cyanide/oxygen.\n\nAvoid chasing recovery by endlessly adding tanks without data. A single campaign of timed samples (tank 1, 3, 6, final) builds a profile showing where gold stops dissolving. That profile saves capital and reagent costs.\n\nPrimerock diagnostic leach programs help custom millers in Kadoma and Kwekwe set realistic residence targets.",
+      "readMinutes": 4,
+      "imageHint": "leach_kinetics",
+      "tags": ["cil", "residence time", "recovery"]
+    },
+    {
+      "id": "art-007",
+      "title": "CIP Flowsheets: Separate Leach, Focused Adsorption",
+      "category": "CIP",
+      "summary": "Carbon-in-Pulp splits leaching and adsorption—useful when ore needs long cyanide contact before carbon sees the pulp.",
+      "content": "CIP begins with leach tanks without carbon, allowing aggressive cyanide and oxygen conditions without crushing carbon or accelerating attrition. Pregnant solution then flows to CIP adsorption tanks where carbon picks up gold in near-clear solution.\n\nThis separation helps when ore contains organics that foul carbon or when leach requires high shear that would break carbon particles. The trade-off is more equipment and pumping between stages.\n\nOperators must watch clarification: fine slimes carry over can blind carbon surfaces. D thickeners or cyclones before CIP improve adsorption kinetics. Track barren solution grade after the last CIP tank—it should approach single-digit ppb when carbon is healthy.\n\nPrimerock can compare CIL versus CIP options using your ore's leach and preg-robbing behaviour.",
+      "readMinutes": 4,
+      "imageHint": "cip_circuit",
+      "tags": ["cip", "adsorption", "flowsheet"]
+    },
+    {
+      "id": "art-008",
+      "title": "Elution and Electrowinning After CIP/CIL",
+      "category": "CIP",
+      "summary": "Loaded carbon must be stripped cleanly to recover gold as doré. Weak elution often looks like a leach problem.",
+      "content": "After loading gold, carbon moves to elution where hot caustic cyanide or AARL-style circuits desorb gold into a rich electrolyte. The stripped carbon is reactivated thermally or acid-washed before returning to the plant.\n\nPoor elution shows up as gold still on carbon after strip, high reagent consumption, or long cycle times. Causes include organic fouling, insufficient temperature, and calcium scale from hard water common in parts of Zimbabwe.\n\nElectrowinning plates gold onto steel wool cathodes; smelting produces doré for assay before Fidelity delivery. Always assay eluate and doré together with tailings during reconciliation weeks—losses often hide in unaudited carbon inventory.\n\nPrimerock assays eluate, doré, and tailings to close the mass balance with confidence.",
+      "readMinutes": 5,
+      "imageHint": "elution",
+      "tags": ["cip", "cil", "elution", "doré"]
+    },
+    {
+      "id": "art-009",
+      "title": "Managing Activated Carbon Fines and Losses",
+      "category": "Activated Carbon",
+      "summary": "Carbon fines carry gold out of the circuit. Screening and attrition control protect recovery and profits.",
+      "content": "Activated carbon breaks down under agitation, pumping, and thermal reactivation. Particles below about 1 mm often pass screens and exit with tailings, carrying adsorbed gold that cannot be eluted economically.\n\nInstall inter-tank screens and regular carbon size checks. Compare carbon inventory monthly: fresh carbon added minus estimated losses should match plant records. Mystery losses may be security issues or unmeasured tailings discharge.\n\nChoose carbon with good hardness for your application—soft coconut carbon may load well but generate fines faster in aggressive CIL mixing. Balance purchase price against attrition rate.\n\nPrimerock carbon activity and gold-on-carbon tests quantify whether losses are mechanical or metallurgical.",
+      "readMinutes": 4,
+      "imageHint": "carbon_screen",
+      "tags": ["carbon", "fines", "recovery"]
+    },
+    {
+      "id": "art-010",
+      "title": "Reactivating Carbon: When Heat Treatment Pays",
+      "category": "Activated Carbon",
+      "summary": "Thermal reactivation restores pore structure fouled by organics and base metals. Know when to regenerate versus replace.",
+      "content": "Carbon loses activity when micropores block with oils, flotation collectors, and metal precipitates. Acid washing removes inorganic scale; thermal reactivation burns organics in controlled kilns around 700–850°C with steam or inert atmosphere.\n\nSigns you need reactivation: iodine number drop, longer elution cycles, and rising barren solution grades despite fresh cyanide. If reactivation no longer restores loading after three cycles, budget for fresh carbon.\n\nTransport wet carbon in sealed drums—dry dusty carbon is a health hazard and fire risk. Track batch numbers so you can trace a bad reactivation lot quickly.\n\nPrimerock compares fresh versus regenerated carbon performance using standard loading tests.",
+      "readMinutes": 4,
+      "imageHint": "reactivation_kiln",
+      "tags": ["carbon", "reactivation", "elution"]
+    },
+    {
+      "id": "art-011",
+      "title": "Cyanide Safety Essentials for Site Supervisors",
+      "category": "Cyanide Safety",
+      "summary": "Safe cyanide handling protects workers, communities, and your licence to operate. Supervisors set the daily tone.",
+      "content": "Start with training records: every person near cyanide stores or leach areas must understand HCN risk, pH control, and emergency response. Post emergency numbers and neutralisation procedures in English and local languages where practical.\n\nSegregate cyanide from acids, nitrates, and oxidisers in locked stores with bunding to contain spills. Issue PPE—gloves, goggles, apron—and enforce no lone work on night shift near open tanks.\n\nDrill spill scenarios quarterly: small bag tear on the pad, pump seal leak at leach, tailings overtopping. Inspect tailings detox equipment if installed; passive ponds still need monitoring.\n\nPrimerock supports cyanide awareness workshops and residual cyanide testing for environmental compliance documentation.",
+      "readMinutes": 5,
+      "imageHint": "cyanide_ppe",
+      "tags": ["cyanide", "safety", "training"]
+    },
+    {
+      "id": "art-012",
+      "title": "Tailings Detox and Community Trust",
+      "category": "Cyanide Safety",
+      "summary": "Residual cyanide in tailings is both an environmental and social issue. Testing builds trust with neighbours and regulators.",
+      "content": "Even well-run plants discharge tailings with some residual cyanide unless detoxified. Weak acid dissociable (WAD) cyanide is the common regulatory metric because it approximates toxicity to aquatic life.\n\nNatural degradation in ponds lowers cyanide over days if pH and aeration are managed, but do not assume ponds are safe without data—especially in rainy season overflow events. Document WAD before any discharge or dam raise.\n\nShare summary results with community committees where appropriate; opaque operations invite conflict. Pair cyanide data with pH and metals to show holistic stewardship.\n\nPrimerock tailings cyanide packages include chain-of-custody sampling guidance for remote heap leach and milling sites.",
+      "readMinutes": 4,
+      "imageHint": "tailings_pond",
+      "tags": ["cyanide", "tailings", "environment"]
+    },
+    {
+      "id": "art-013",
+      "title": "pH Control with Lime in Zimbabwe Leach Circuits",
+      "category": "pH Testing",
+      "summary": "Lime is the most common alkalinity source. Correct dosing prevents HCN formation and stabilises cyanide.",
+      "content": "Hydrated lime or quicklime raises pH to keep cyanide as CN⁻. Most circuits target 10.0–11.0 measured on slurry, not clear water. Test at the same point each shift—final tank discharge is a good control location.\n\nOver-liming creates scale on pipes and carbon fouling; under-liming risks HCN odour near tanks and poor gold dissolution. Acid-generating ore consumes lime continuously; budget reagent per tonne based on test work, not last year's average.\n\nCalibrate pH meters weekly with buffer solutions stored correctly—not expired bottles sitting in sun. Cheap meters fail silently; keep a backup strip kit for cross-check.\n\nPrimerock measures pH alongside cyanide-related samples when diagnosing plant upsets.",
+      "readMinutes": 4,
+      "imageHint": "ph_meter",
+      "tags": ["ph", "lime", "leaching"]
+    },
+    {
+      "id": "art-014",
+      "title": "Grind Size and Liberation: A Practical Guide",
+      "category": "Particle Size",
+      "summary": "Gold locked in silicates needs sufficient grind size reduction. Too fine wastes power and creates slimes.",
+      "content": "Particle size analysis reports how fine your milled ore is, often as P80—the size where 80% of particles pass. Gold in quartz may need P80 below 100 µm; free-milling alluvial material may leach well much coarser.\n\nRun lab grind curves: test recovery at P80 150, 106, and 75 µm on composite samples. If recovery flatlines above 106 µm, do not over-grind. If recovery climbs steadily finer, consider mill upgrade or secondary grinding stage.\n\nOn-site, use screen stacks or send hourly composites to Primerock for laser diffraction or wet sieving. Correlate size with tailings grade the same day so operators see cause and effect.\n\nRemember: size distribution matters as much as average—excess ultrafines slow percolation in heap leach and blind filters in CIP.",
+      "readMinutes": 5,
+      "imageHint": "sieve_analysis",
+      "tags": ["particle size", "grind", "liberation"]
+    },
+    {
+      "id": "art-015",
+      "title": "Representative Sampling on Small-Scale Mines",
+      "category": "Mining Tips",
+      "summary": "Biased sampling causes more disputes than bad assays. Learn field techniques that hold up at Fidelity.",
+      "content": "Gold deposits in Zimbabwe are often nuggety along shear zones. Taking only visible quartz with specks produces fantasy grades; ignoring high-grade streaks loses ore value. The goal is unbiased representation of the volume you will actually process.\n\nFor development faces, cut horizontal or vertical channels across the full width, collecting equal mass per increment. On stockpiles, use incremental shovel digs from multiple depths and locations, then combine and split.\n\nConing and quartering still works without fancy equipment: spread sample on a clean tarp, mix, cone up, flatten, quarter, discard opposite quarters, repeat until you reach lab sample mass. Label immediately with waterproof markers.\n\nPrimerock offers sampling kits, training days, and referee assays when buyer and seller disagree.",
+      "readMinutes": 5,
+      "imageHint": "field_sampling",
+      "tags": ["sampling", "small-scale", "grade control"]
+    },
+    {
+      "id": "art-016",
+      "title": "Planning Gold Deliveries Around Fidelity Prices",
+      "category": "Mining Tips",
+      "summary": "Daily Fidelity buying prices move with international markets. Use assays and timing to maximise net returns.",
+      "content": "Fidelity Gold Refinery publishes USD per gram buying rates used across Zimbabwe's formal gold market. This app bundles sample prices offline; sync when online for latest quotes.\n\nBefore delivery, reconcile mine estimate with independent assay—preferably on dried concentrate or doré representing the batch. Deductions for moisture, impurities, and dealer fees affect net pay.\n\nTransport security matters as much as price timing. Use licensed channels, sealed containers, and two-person custody rules. Keep copies of assay, weighbridge ticket, and receipt until payment clears.\n\nTrack price trends in the app chart to spot weekly patterns, but do not delay urgent cashflow solely for marginal cents unless storage is secure and insured.",
+      "readMinutes": 4,
+      "imageHint": "gold_delivery",
+      "tags": ["fidelity", "prices", "delivery"]
+    },
+    {
+      "id": "art-017",
+      "title": "Laboratory QAQC: Blanks, Duplicates, and Standards",
+      "category": "Laboratory Practices",
+      "summary": "Quality assurance separates accredited labs from guesswork. Miners should know what QAQC means on their report.",
+      "content": "Blanks are material with negligible gold run through the full process to detect contamination—critical in busy labs crushing hundreds of samples weekly. Duplicates split the same pulp twice to measure precision. Certified reference materials (standards) have known gold content to test accuracy.\n\nAcceptance limits vary, but many programs flag duplicate differences above roughly 10% relative at grades above 1 g/t. Standard recovery outside 95–105% triggers investigation before client results release.\n\nAsk labs how often they fail QAQC and what rerun policy applies. Transparent labs welcome questions; opaque labs cost you money in wrong plant decisions.\n\nPrimerock publishes QAQC summaries on request and retains pulp rejects for referee testing within agreed periods.",
+      "readMinutes": 4,
+      "imageHint": "qaqc_chart",
+      "tags": ["laboratory", "qaqc", "accreditation"]
+    },
+    {
+      "id": "art-018",
+      "title": "Chain of Custody: From Pit to Certificate",
+      "category": "Laboratory Practices",
+      "summary": "Document every handoff of a sample so assay results stand up in disputes and audits.",
+      "content": "Chain of custody begins when you seal a bag at the face. Record GPS or shaft level, sample ID, collector name, time, and intended tests. Each transfer—to transport, lab reception, and preparation—should be signed or logged digitally.\n\nTamper-evident seals and unique IDs prevent substitution, a risk in high-grade environments. Photograph bags at dispatch if possible. Labs should log condition on arrival (wet, torn, underweight) before accepting.\n\nIf results surprise you, the first question is whether the tested pulp matches your field sample—not whether the instrument failed. Strong custody records shorten dispute resolution from weeks to days.\n\nPrimerock reception logs integrate with SMS/WhatsApp status updates so remote site managers know when results are ready.",
+      "readMinutes": 4,
+      "imageHint": "sample_sealed",
+      "tags": ["laboratory", "chain of custody", "sampling"]
+    }
+  ]
+}
