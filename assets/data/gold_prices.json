@@ -2,7 +2,7 @@
   "source": "Fidelity Gold Refinery (FGR)",
   "sourceUrl": "https://fgr.co.zw/",
   "operationsUrl": "https://fgr.co.zw/gold-operations/gold-buying-and-gold-refining-operations/",
-  "lastUpdated": "2026-07-16",
+  "lastUpdated": "2026-07-17",
   "note": "Official FGR buying categories (USD/g and USD/oz). The fgr.co.zw homepage popup is an email signup for daily prices \u2014 live tables are published by FGR and mirrored by public mining news. Always confirm at an FGR buying centre before delivery. When Wi\u2011Fi/data is available, the app refreshes from the free remote JSON if configured.",
   "troyOunceGrams": 31.1035,
   "paymentNote": "FGR payment models: Cash (USD) and Hybrid (60% Nostro / 40% local currency). Fire Assay cash applies to gold above 100g with no sample deduction; transfer deducts a sample of not more than 10g.",
@@ -332,6 +332,47 @@
           "label": "Fire Assay (Cash)",
           "usdPerGram": 122.28,
           "usdPerOz": 3803.34
+        }
+      ]
+    },
+    {
+      "date": "2026-07-17",
+      "categories": [
+        {
+          "id": "sg90",
+          "label": "SG 90% and Above",
+          "usdPerGram": 120.02,
+          "usdPerOz": 3733.04
+        },
+        {
+          "id": "sg85",
+          "label": "SG 85% but Less Than 90%",
+          "usdPerGram": 118.75,
+          "usdPerOz": 3693.54
+        },
+        {
+          "id": "sg80",
+          "label": "SG 80% but Less Than 85%",
+          "usdPerGram": 117.48,
+          "usdPerOz": 3654.04
+        },
+        {
+          "id": "sg75",
+          "label": "SG 75% but Less Than 80%",
+          "usdPerGram": 116.21,
+          "usdPerOz": 3614.54
+        },
+        {
+          "id": "sample",
+          "label": "Sample (5\u201310 g)",
+          "usdPerGram": 114.3,
+          "usdPerOz": 3555.13
+        },
+        {
+          "id": "fire_assay_cash",
+          "label": "Fire Assay (Cash)",
+          "usdPerGram": 120.65,
+          "usdPerOz": 3752.64
         }
       ]
     }
