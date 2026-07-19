@@ -5,7 +5,7 @@ class AppConstants {
 
   static const String appName = 'Primerock Mining Companion';
   static const String companyName = 'Primerock Solutions';
-  static const String appVersion = '1.1.0';
+  static const String appVersion = '1.2.0';
 
   /// Free GitHub raw host for offline-first refresh on Wi‑Fi/data.
   /// Falls back to bundled assets if unreachable (still $0/month).
