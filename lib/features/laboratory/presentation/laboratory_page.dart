@@ -28,7 +28,7 @@ class LaboratoryPage extends ConsumerWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: contentAsync.when(
           loading: () => const Padding(
             padding: EdgeInsets.all(16),
@@ -62,7 +62,7 @@ class _LabBody extends StatelessWidget {
               Text(
                 content.companyName ?? AppConstants.companyName,
                 style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                      color: AppColors.goldLight,
+                      color: AppColors.accentSoft(context),
                       fontWeight: FontWeight.bold,
                     ),
               ),
@@ -70,7 +70,7 @@ class _LabBody extends StatelessWidget {
                 const SizedBox(height: 4),
                 Text(
                   content.tagline!,
-                  style: const TextStyle(color: AppColors.gold),
+                  style: TextStyle(color: AppColors.accent(context)),
                 ),
               ],
             ],
@@ -81,7 +81,10 @@ class _LabBody extends StatelessWidget {
         GlassCard(
           child: Text(
             content.about,
-            style: const TextStyle(color: AppColors.white70, height: 1.5),
+            style: TextStyle(
+              color: AppColors.textSecondary(context),
+              height: 1.5,
+            ),
           ),
         ),
         const SizedBox(height: 24),
@@ -95,21 +98,27 @@ class _LabBody extends StatelessWidget {
                 children: [
                   Text(
                     s.name,
-                    style: const TextStyle(
-                      color: AppColors.goldLight,
+                    style: TextStyle(
+                      color: AppColors.accentSoft(context),
                       fontWeight: FontWeight.w600,
                     ),
                   ),
                   const SizedBox(height: 6),
                   Text(
                     s.description,
-                    style: const TextStyle(color: AppColors.white70, height: 1.4),
+                    style: TextStyle(
+                      color: AppColors.textSecondary(context),
+                      height: 1.4,
+                    ),
                   ),
                   if (s.turnaround != null) ...[
                     const SizedBox(height: 8),
                     Text(
                       'Turnaround: ${s.turnaround}',
-                      style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                      style: TextStyle(
+                        color: AppColors.textMuted(context),
+                        fontSize: 12,
+                      ),
                     ),
                   ],
                 ],
@@ -129,15 +138,18 @@ class _LabBody extends StatelessWidget {
                   if (item.title.isNotEmpty)
                     Text(
                       item.title,
-                      style: const TextStyle(
-                        color: AppColors.gold,
+                      style: TextStyle(
+                        color: AppColors.accent(context),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   if (item.title.isNotEmpty) const SizedBox(height: 6),
                   Text(
                     item.body,
-                    style: const TextStyle(color: AppColors.white70, height: 1.4),
+                    style: TextStyle(
+                      color: AppColors.textSecondary(context),
+                      height: 1.4,
+                    ),
                   ),
                 ],
               ),
@@ -169,8 +181,8 @@ class _LabBody extends StatelessWidget {
                         children: [
                           Text(
                             step.title,
-                            style: const TextStyle(
-                              color: AppColors.goldLight,
+                            style: TextStyle(
+                              color: AppColors.accentSoft(context),
                               fontWeight: FontWeight.w600,
                             ),
                           ),
@@ -178,8 +190,8 @@ class _LabBody extends StatelessWidget {
                             const SizedBox(height: 4),
                             Text(
                               step.description,
-                              style: const TextStyle(
-                                color: AppColors.white70,
+                              style: TextStyle(
+                                color: AppColors.textSecondary(context),
                                 height: 1.4,
                               ),
                             ),
@@ -205,14 +217,14 @@ class _LabBody extends StatelessWidget {
                 child: ExpansionTile(
                   title: Text(
                     faq.question,
-                    style: const TextStyle(
-                      color: AppColors.goldLight,
+                    style: TextStyle(
+                      color: AppColors.accentSoft(context),
                       fontWeight: FontWeight.w500,
                       fontSize: 14,
                     ),
                   ),
                   iconColor: AppColors.gold,
-                  collapsedIconColor: AppColors.white38,
+                  collapsedIconColor: AppColors.textMuted(context),
                   children: [
                     Padding(
                       padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
@@ -220,7 +232,10 @@ class _LabBody extends StatelessWidget {
                         alignment: Alignment.centerLeft,
                         child: Text(
                           faq.answer,
-                          style: const TextStyle(color: AppColors.white70, height: 1.45),
+                          style: TextStyle(
+                            color: AppColors.textSecondary(context),
+                            height: 1.45,
+                          ),
                         ),
                       ),
                     ),

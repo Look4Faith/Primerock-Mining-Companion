@@ -167,7 +167,7 @@ class _RecordFormPageState extends ConsumerState<RecordFormPage> {
         ],
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Form(
           key: _formKey,
           child: ListView(
@@ -183,18 +183,21 @@ class _RecordFormPageState extends ConsumerState<RecordFormPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text('Date', style: TextStyle(color: AppColors.white38)),
+                          Text(
+                            'Date',
+                            style: TextStyle(color: AppColors.textMuted(context)),
+                          ),
                           Text(
                             Formatters.date(_date),
-                            style: const TextStyle(
-                              color: AppColors.goldLight,
+                            style: TextStyle(
+                              color: AppColors.accentSoft(context),
                               fontWeight: FontWeight.w600,
                             ),
                           ),
                         ],
                       ),
                     ),
-                    const Icon(Icons.edit, color: AppColors.white38, size: 18),
+                    Icon(Icons.edit, color: AppColors.textMuted(context), size: 18),
                   ],
                 ),
               ),

@@ -30,7 +30,7 @@ class KnowledgeHubPage extends ConsumerWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -154,8 +154,8 @@ class _ArticleTile extends ConsumerWidget {
                 children: [
                   Text(
                     article.category,
-                    style: const TextStyle(
-                      color: AppColors.gold,
+                    style: TextStyle(
+                      color: AppColors.accent(context),
                       fontSize: 11,
                       fontWeight: FontWeight.w600,
                     ),
@@ -164,7 +164,7 @@ class _ArticleTile extends ConsumerWidget {
                   Text(
                     article.title,
                     style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                          color: AppColors.goldLight,
+                          color: AppColors.accentSoft(context),
                           fontWeight: FontWeight.w600,
                         ),
                   ),
@@ -173,19 +173,25 @@ class _ArticleTile extends ConsumerWidget {
                     article.summary,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: AppColors.white70, height: 1.35),
+                    style: TextStyle(
+                      color: AppColors.textSecondary(context),
+                      height: 1.35,
+                    ),
                   ),
                   const SizedBox(height: 8),
                   Text(
                     '${article.readMinutes} min read',
-                    style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                    style: TextStyle(
+                      color: AppColors.textMuted(context),
+                      fontSize: 12,
+                    ),
                   ),
                 ],
               ),
             ),
             Icon(
               bookmarked ? Icons.bookmark : Icons.bookmark_border,
-              color: bookmarked ? AppColors.gold : AppColors.white38,
+              color: bookmarked ? AppColors.gold : AppColors.textMuted(context),
             ),
           ],
         ),

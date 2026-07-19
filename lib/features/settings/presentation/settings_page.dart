@@ -72,7 +72,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: ListView(
           padding: const EdgeInsets.all(16),
           children: [
@@ -81,11 +81,14 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
               child: SwitchListTile(
                 contentPadding: EdgeInsets.zero,
                 title: const Text('Dark mode'),
-                subtitle: const Text('Premium black & gold theme'),
+                subtitle: Text(
+                  darkMode
+                      ? 'Black & gold (default)'
+                      : 'Light cream & gold accents',
+                ),
                 value: darkMode,
-                activeTrackColor: AppColors.gold.withValues(alpha: 0.5),
-                activeThumbColor: AppColors.gold,
-                onChanged: (v) => ref.read(darkModeProvider.notifier).setDark(v),
+                onChanged: (v) =>
+                    ref.read(darkModeProvider.notifier).setDark(v),
               ),
             ),
             const SizedBox(height: 24),
@@ -190,7 +193,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
                     title: const Text('App version'),
                     trailing: Text(
                       AppConstants.appVersion,
-                      style: const TextStyle(color: AppColors.gold),
+                      style: TextStyle(color: AppColors.accent(context)),
                     ),
                   ),
                 ],
@@ -214,7 +217,7 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
   void _showLanguagePicker(String current) {
     showModalBottomSheet<void>(
       context: context,
-      backgroundColor: AppColors.surfaceElevated,
+      backgroundColor: AppColors.elevated(context),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
       ),
@@ -223,12 +226,12 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const Padding(
-                padding: EdgeInsets.all(16),
+              Padding(
+                padding: const EdgeInsets.all(16),
                 child: Text(
                   'Select language',
                   style: TextStyle(
-                    color: AppColors.gold,
+                    color: AppColors.accent(context),
                     fontWeight: FontWeight.w600,
                     fontSize: 16,
                   ),

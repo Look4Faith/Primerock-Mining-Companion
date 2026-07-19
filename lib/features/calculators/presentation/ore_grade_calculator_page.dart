@@ -100,6 +100,7 @@ class _OreGradeCalculatorPageState extends ConsumerState<OreGradeCalculatorPage>
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'Gold unit',
               value: _goldUnit,
               units: kMassUnits,
@@ -121,7 +122,7 @@ class _OreGradeCalculatorPageState extends ConsumerState<OreGradeCalculatorPage>
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Ore grade', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

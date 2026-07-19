@@ -45,7 +45,7 @@ class RecordsPage extends ConsumerWidget {
         child: const Icon(Icons.add),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Column(
           children: [
             Padding(
@@ -130,19 +130,25 @@ class _SummaryCard extends StatelessWidget {
           children: [
             Text(
               Formatters.monthYear(summary.month),
-              style: const TextStyle(
-                color: AppColors.gold,
+              style: TextStyle(
+                color: AppColors.accent(context),
                 fontWeight: FontWeight.w600,
               ),
             ),
             const SizedBox(height: 8),
             Text(
               '${Formatters.number(summary.goldRecovered)} g gold',
-              style: const TextStyle(color: AppColors.goldLight, fontSize: 13),
+              style: TextStyle(
+                color: AppColors.accentSoft(context),
+                fontSize: 13,
+              ),
             ),
             Text(
               '${summary.entryCount} entries',
-              style: const TextStyle(color: AppColors.white38, fontSize: 12),
+              style: TextStyle(
+                color: AppColors.textMuted(context),
+                fontSize: 12,
+              ),
             ),
             const Spacer(),
             Text(
@@ -171,7 +177,12 @@ class _GoldChart extends StatelessWidget {
     final recent = sorted.length > 12 ? sorted.sublist(sorted.length - 12) : sorted;
 
     if (recent.isEmpty) {
-      return const Center(child: Text('No data', style: TextStyle(color: AppColors.white38)));
+      return Center(
+        child: Text(
+          'No data',
+          style: TextStyle(color: AppColors.textMuted(context)),
+        ),
+      );
     }
 
     final spots = <FlSpot>[];
@@ -200,7 +211,10 @@ class _GoldChart extends StatelessWidget {
               reservedSize: 36,
               getTitlesWidget: (v, _) => Text(
                 v.toInt().toString(),
-                style: const TextStyle(color: AppColors.white38, fontSize: 10),
+                style: TextStyle(
+                  color: AppColors.textMuted(context),
+                  fontSize: 10,
+                ),
               ),
             ),
           ),
@@ -213,7 +227,10 @@ class _GoldChart extends StatelessWidget {
                 if (i < 0 || i >= recent.length) return const SizedBox.shrink();
                 return Text(
                   Formatters.dateShort(recent[i].date),
-                  style: const TextStyle(color: AppColors.white38, fontSize: 9),
+                  style: TextStyle(
+                    color: AppColors.textMuted(context),
+                    fontSize: 9,
+                  ),
                 );
               },
             ),
@@ -255,22 +272,28 @@ class _RecordTile extends ConsumerWidget {
               children: [
                 Text(
                   Formatters.date(record.date),
-                  style: const TextStyle(
-                    color: AppColors.goldLight,
+                  style: TextStyle(
+                    color: AppColors.accentSoft(context),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 const SizedBox(height: 4),
                 Text(
                   'Gold ${Formatters.number(record.goldRecovered)} g · Ore ${Formatters.number(record.oreProcessed)} t',
-                  style: const TextStyle(color: AppColors.white70, fontSize: 13),
+                  style: TextStyle(
+                    color: AppColors.textSecondary(context),
+                    fontSize: 13,
+                  ),
                 ),
                 if (record.notes.isNotEmpty)
                   Text(
                     record.notes,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
-                    style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                    style: TextStyle(
+                      color: AppColors.textMuted(context),
+                      fontSize: 12,
+                    ),
                   ),
               ],
             ),

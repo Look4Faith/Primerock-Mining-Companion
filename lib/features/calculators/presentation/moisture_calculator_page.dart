@@ -99,6 +99,7 @@ class _MoistureCalculatorPageState extends ConsumerState<MoistureCalculatorPage>
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'Weight unit',
               value: _weightUnit,
               units: kMassUnits,
@@ -120,7 +121,7 @@ class _MoistureCalculatorPageState extends ConsumerState<MoistureCalculatorPage>
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Dry weight', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

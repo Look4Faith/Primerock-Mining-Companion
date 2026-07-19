@@ -33,6 +33,7 @@ InputDecoration calcInputDecoration(String label, {String? hint}) {
 }
 
 Widget calcUnitDropdown({
+  required BuildContext context,
   required String label,
   required String value,
   required List<String> units,
@@ -42,12 +43,15 @@ Widget calcUnitDropdown({
     key: ValueKey('$label-$value'),
     initialValue: value,
     decoration: calcInputDecoration(label),
-    dropdownColor: AppColors.surfaceElevated,
+    dropdownColor: AppColors.elevated(context),
     items: units
         .map(
           (u) => DropdownMenuItem(
             value: u,
-            child: Text(u, style: const TextStyle(color: AppColors.white)),
+            child: Text(
+              u,
+              style: TextStyle(color: AppColors.textPrimary(context)),
+            ),
           ),
         )
         .toList(),
@@ -56,13 +60,16 @@ Widget calcUnitDropdown({
 }
 
 Widget calcRecentHistory({
+  required BuildContext context,
   required List<CalcHistoryEntry> entries,
 }) {
   if (entries.isEmpty) {
     return GlassCard(
       child: Text(
         'No calculations yet. Run your first calculation above.',
-        style: TextStyle(color: AppColors.white70.withValues(alpha: 0.9)),
+        style: TextStyle(
+          color: AppColors.textSecondary(context).withValues(alpha: 0.9),
+        ),
       ),
     );
   }
@@ -84,16 +91,16 @@ Widget calcRecentHistory({
                   Expanded(
                     child: Text(
                       entry.result,
-                      style: const TextStyle(
-                        color: AppColors.goldLight,
+                      style: TextStyle(
+                        color: AppColors.accentSoft(context),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
                   ),
                   Text(
                     Formatters.dateShort(entry.timestamp),
-                    style: const TextStyle(
-                      color: AppColors.white38,
+                    style: TextStyle(
+                      color: AppColors.textMuted(context),
                       fontSize: 12,
                     ),
                   ),
@@ -103,7 +110,10 @@ Widget calcRecentHistory({
                 const SizedBox(height: 4),
                 Text(
                   inputSummary,
-                  style: const TextStyle(color: AppColors.white70, fontSize: 12),
+                  style: TextStyle(
+                    color: AppColors.textSecondary(context),
+                    fontSize: 12,
+                  ),
                 ),
               ],
             ],

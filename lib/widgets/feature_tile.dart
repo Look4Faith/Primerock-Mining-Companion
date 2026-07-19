@@ -29,7 +29,7 @@ class FeatureTile extends StatelessWidget {
           Container(
             width: 48,
             height: 48,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle,
               gradient: AppColors.goldGradient,
             ),
@@ -43,7 +43,7 @@ class FeatureTile extends StatelessWidget {
                 Text(
                   title,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: AppColors.goldLight,
+                        color: AppColors.accentSoft(context),
                         fontWeight: FontWeight.w600,
                       ),
                 ),
@@ -51,13 +51,13 @@ class FeatureTile extends StatelessWidget {
                 Text(
                   subtitle,
                   style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                        color: AppColors.white70,
+                        color: AppColors.textSecondary(context),
                       ),
                 ),
               ],
             ),
           ),
-          const Icon(Icons.chevron_right, color: AppColors.gold),
+          Icon(Icons.chevron_right, color: AppColors.accent(context)),
         ],
       ),
     )

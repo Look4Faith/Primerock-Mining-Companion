@@ -74,7 +74,7 @@ class _AssistantPageState extends ConsumerState<AssistantPage> {
         ],
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Column(
           children: [
             Expanded(
@@ -152,7 +152,7 @@ class _SuggestedView extends StatelessWidget {
                     child: Text(
                       'Ask me about mining, assays, or Primerock services.',
                       style: Theme.of(context).textTheme.titleSmall?.copyWith(
-                            color: AppColors.goldLight,
+                            color: AppColors.accentSoft(context),
                           ),
                     ),
                   ),
@@ -162,9 +162,12 @@ class _SuggestedView extends StatelessWidget {
           ),
         ).animate().fadeIn().slideY(begin: 0.1),
         const SizedBox(height: 20),
-        const Text(
+        Text(
           'Suggested questions',
-          style: TextStyle(color: AppColors.gold, fontWeight: FontWeight.w600),
+          style: TextStyle(
+            color: AppColors.accent(context),
+            fontWeight: FontWeight.w600,
+          ),
         ),
         const SizedBox(height: 12),
         ...kb.suggestedQuestions.map(
@@ -178,7 +181,10 @@ class _SuggestedView extends StatelessWidget {
                   const Icon(Icons.chat_bubble_outline, color: AppColors.gold, size: 20),
                   const SizedBox(width: 12),
                   Expanded(
-                    child: Text(q, style: const TextStyle(color: AppColors.white70)),
+                    child: Text(
+                      q,
+                      style: TextStyle(color: AppColors.textSecondary(context)),
+                    ),
                   ),
                 ],
               ),
@@ -248,7 +254,7 @@ class _ChatBubble extends StatelessWidget {
         child: Text(
           message.text,
           style: TextStyle(
-            color: isUser ? AppColors.goldLight : AppColors.white70,
+            color: isUser ? AppColors.goldLight : AppColors.textPrimary(context),
             height: 1.45,
           ),
         ),

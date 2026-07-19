@@ -151,7 +151,7 @@ class _BookingPageState extends ConsumerState<BookingPage> {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Form(
           key: _formKey,
           child: ListView(
@@ -164,14 +164,17 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                     Text(
                       'Primerock Laboratory',
                       style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                            color: AppColors.goldLight,
+                            color: AppColors.accentSoft(context),
                             fontWeight: FontWeight.bold,
                           ),
                     ),
                     const SizedBox(height: 6),
-                    const Text(
+                    Text(
                       'Fill in your details and send via WhatsApp. Your request is saved locally on this device.',
-                      style: TextStyle(color: AppColors.white70, height: 1.4),
+                      style: TextStyle(
+                        color: AppColors.textSecondary(context),
+                        height: 1.4,
+                      ),
                     ),
                   ],
                 ),
@@ -221,9 +224,9 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          const Text(
+                          Text(
                             'Preferred date (optional)',
-                            style: TextStyle(color: AppColors.white38),
+                            style: TextStyle(color: AppColors.textMuted(context)),
                           ),
                           Text(
                             _preferredDate != null
@@ -231,8 +234,8 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                                 : 'Tap to select',
                             style: TextStyle(
                               color: _preferredDate != null
-                                  ? AppColors.goldLight
-                                  : AppColors.white38,
+                                  ? AppColors.accentSoft(context)
+                                  : AppColors.textMuted(context),
                               fontWeight: _preferredDate != null
                                   ? FontWeight.w600
                                   : FontWeight.normal,
@@ -244,12 +247,12 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                     if (_preferredDate != null)
                       IconButton(
                         icon: const Icon(Icons.close, size: 18),
-                        color: AppColors.white38,
+                        color: AppColors.textMuted(context),
                         onPressed: () => setState(() => _preferredDate = null),
                         tooltip: 'Clear date',
                       )
                     else
-                      const Icon(Icons.edit, color: AppColors.white38, size: 18),
+                      Icon(Icons.edit, color: AppColors.textMuted(context), size: 18),
                   ],
                 ),
               ),
@@ -278,10 +281,10 @@ class _BookingPageState extends ConsumerState<BookingPage> {
               const SectionHeader(title: 'Recent bookings'),
               const SizedBox(height: 8),
               if (recentBookings.isEmpty)
-                const GlassCard(
+                GlassCard(
                   child: Text(
                     'No local bookings yet. Submit a request above.',
-                    style: TextStyle(color: AppColors.white70),
+                    style: TextStyle(color: AppColors.textSecondary(context)),
                   ),
                 )
               else
@@ -297,16 +300,16 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                               Expanded(
                                 child: Text(
                                   b.name,
-                                  style: const TextStyle(
-                                    color: AppColors.goldLight,
+                                  style: TextStyle(
+                                    color: AppColors.accentSoft(context),
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
                               Text(
                                 Formatters.dateShort(b.createdAt),
-                                style: const TextStyle(
-                                  color: AppColors.white38,
+                                style: TextStyle(
+                                  color: AppColors.textMuted(context),
                                   fontSize: 12,
                                 ),
                               ),
@@ -315,18 +318,27 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                           const SizedBox(height: 4),
                           Text(
                             b.serviceInterest,
-                            style: const TextStyle(color: AppColors.gold, fontSize: 13),
+                            style: TextStyle(
+                              color: AppColors.accent(context),
+                              fontSize: 13,
+                            ),
                           ),
                           const SizedBox(height: 4),
                           Text(
                             b.phone,
-                            style: const TextStyle(color: AppColors.white70, fontSize: 13),
+                            style: TextStyle(
+                              color: AppColors.textSecondary(context),
+                              fontSize: 13,
+                            ),
                           ),
                           if (b.preferredDate != null) ...[
                             const SizedBox(height: 4),
                             Text(
                               'Preferred: ${Formatters.date(b.preferredDate!)}',
-                              style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                              style: TextStyle(
+                                color: AppColors.textMuted(context),
+                                fontSize: 12,
+                              ),
                             ),
                           ],
                           if (b.notes.isNotEmpty) ...[
@@ -335,7 +347,10 @@ class _BookingPageState extends ConsumerState<BookingPage> {
                               b.notes,
                               maxLines: 2,
                               overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                              style: TextStyle(
+                                color: AppColors.textMuted(context),
+                                fontSize: 12,
+                              ),
                             ),
                           ],
                         ],

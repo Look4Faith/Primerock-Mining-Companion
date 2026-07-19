@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../services/providers.dart';
+import '../../../widgets/app_page_background.dart';
 import '../../../widgets/feature_tile.dart';
 
 class HomePage extends ConsumerWidget {
@@ -74,7 +75,7 @@ class HomePage extends ConsumerWidget {
 
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: SafeArea(
           child: CustomScrollView(
             slivers: [
@@ -84,7 +85,7 @@ class HomePage extends ConsumerWidget {
                 title: Text(
                   AppConstants.appName,
                   style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                        color: AppColors.gold,
+                        color: AppColors.accent(context),
                         fontWeight: FontWeight.w700,
                       ),
                 ),
@@ -103,60 +104,29 @@ class HomePage extends ConsumerWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Center(
-                        child: Container(
-                          padding: const EdgeInsets.all(16),
-                          decoration: BoxDecoration(
-                            shape: BoxShape.circle,
-                            border: Border.all(
-                              color: AppColors.gold.withValues(alpha: 0.5),
-                              width: 2,
-                            ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: AppColors.gold.withValues(alpha: 0.15),
-                                blurRadius: 24,
-                                spreadRadius: 2,
-                              ),
-                            ],
-                          ),
-                          child: ClipOval(
-                            child: Image.asset(
-                              AppConstants.logoAsset,
-                              width: 88,
-                              height: 88,
-                              fit: BoxFit.cover,
-                              errorBuilder: (_, __, ___) => Container(
-                                width: 88,
-                                height: 88,
-                                color: AppColors.surfaceElevated,
-                                child: const Icon(
-                                  Icons.diamond_outlined,
-                                  color: AppColors.gold,
-                                  size: 40,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
+                        child: BrandLogoBadge(assetPath: AppConstants.logoAsset),
                       ),
                       const SizedBox(height: 20),
                       Text(
                         greeting,
                         style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                              color: AppColors.goldLight,
+                              color: AppColors.accentSoft(context),
                               fontWeight: FontWeight.bold,
                             ),
                       ),
                       const SizedBox(height: 6),
                       Text(
                         'Your offline-first mining companion by ${AppConstants.companyName}.',
-                        style: const TextStyle(color: AppColors.white70, height: 1.4),
+                        style: TextStyle(
+                          color: AppColors.textSecondary(context),
+                          height: 1.4,
+                        ),
                       ),
                       const SizedBox(height: 28),
                       Text(
                         'Tools & Services',
                         style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                              color: AppColors.gold,
+                              color: AppColors.accent(context),
                               fontWeight: FontWeight.w600,
                             ),
                       ),

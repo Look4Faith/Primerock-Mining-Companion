@@ -106,7 +106,7 @@ class _CalculatorGridCard extends StatelessWidget {
               Text(
                 definition.title,
                 style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                      color: AppColors.goldLight,
+                      color: AppColors.accentSoft(context),
                       fontWeight: FontWeight.w600,
                     ),
               ),
@@ -116,7 +116,7 @@ class _CalculatorGridCard extends StatelessWidget {
                 maxLines: 2,
                 overflow: TextOverflow.ellipsis,
                 style: Theme.of(context).textTheme.bodySmall?.copyWith(
-                      color: AppColors.white70,
+                      color: AppColors.textSecondary(context),
                     ),
               ),
             ],

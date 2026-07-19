@@ -23,48 +23,54 @@ class CalculatorScaffold extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(title)),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          GlassCard(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Text(
-                  'How it works',
-                  style: TextStyle(
-                    color: AppColors.goldLight,
-                    fontWeight: FontWeight.w600,
+      body: Container(
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
+        child: ListView(
+          padding: const EdgeInsets.all(16),
+          children: [
+            GlassCard(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'How it works',
+                    style: TextStyle(
+                      color: AppColors.accentSoft(context),
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                ),
-                const SizedBox(height: 8),
-                Text(
-                  explanation,
-                  style: const TextStyle(color: AppColors.white70, height: 1.4),
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 16),
-          form,
-          if (result != null) ...[
-            const SizedBox(height: 16),
-            result!,
-          ],
-          if (history != null) ...[
-            const SizedBox(height: 24),
-            const Text(
-              'Recent calculations',
-              style: TextStyle(
-                color: AppColors.gold,
-                fontWeight: FontWeight.w600,
-                fontSize: 16,
+                  const SizedBox(height: 8),
+                  Text(
+                    explanation,
+                    style: TextStyle(
+                      color: AppColors.textSecondary(context),
+                      height: 1.4,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(height: 8),
-            history!,
+            const SizedBox(height: 16),
+            form,
+            if (result != null) ...[
+              const SizedBox(height: 16),
+              result!,
+            ],
+            if (history != null) ...[
+              const SizedBox(height: 24),
+              Text(
+                'Recent calculations',
+                style: TextStyle(
+                  color: AppColors.accent(context),
+                  fontWeight: FontWeight.w600,
+                  fontSize: 16,
+                ),
+              ),
+              const SizedBox(height: 8),
+              history!,
+            ],
           ],
-        ],
+        ),
       ),
     );
   }
@@ -82,12 +88,12 @@ class ResultBanner extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text(label, style: const TextStyle(color: AppColors.white70)),
+          Text(label, style: TextStyle(color: AppColors.textSecondary(context))),
           const SizedBox(height: 6),
           Text(
             value,
             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                  color: AppColors.goldLight,
+                  color: AppColors.accentSoft(context),
                   fontWeight: FontWeight.bold,
                 ),
           ),

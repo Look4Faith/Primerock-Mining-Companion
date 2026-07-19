@@ -28,7 +28,7 @@ class SectionHeader extends StatelessWidget {
                 Text(
                   title,
                   style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                        color: AppColors.gold,
+                        color: AppColors.accent(context),
                         fontWeight: FontWeight.w700,
                       ),
                 ),
@@ -36,7 +36,7 @@ class SectionHeader extends StatelessWidget {
                   const SizedBox(height: 4),
                   Text(
                     subtitle!,
-                    style: const TextStyle(color: AppColors.white70),
+                    style: TextStyle(color: AppColors.textSecondary(context)),
                   ),
                 ],
               ],

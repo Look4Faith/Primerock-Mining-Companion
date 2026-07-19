@@ -119,7 +119,7 @@ class _SlurryDensityCalculatorPageState
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Percent solids', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

@@ -30,7 +30,7 @@ class NewsDetailPage extends ConsumerWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: itemAsync.when(
           loading: () => const Padding(
             padding: EdgeInsets.all(16),
@@ -60,15 +60,15 @@ class NewsDetailPage extends ConsumerWidget {
                     children: [
                       Text(
                         item.category,
-                        style: const TextStyle(
-                          color: AppColors.gold,
+                        style: TextStyle(
+                          color: AppColors.accent(context),
                           fontWeight: FontWeight.w600,
                         ),
                       ),
                       const Spacer(),
                       Text(
                         Formatters.date(item.date),
-                        style: const TextStyle(color: AppColors.white38),
+                        style: TextStyle(color: AppColors.textMuted(context)),
                       ),
                     ],
                   ).animate().fadeIn(),
@@ -76,7 +76,7 @@ class NewsDetailPage extends ConsumerWidget {
                   Text(
                     item.title,
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          color: AppColors.goldLight,
+                          color: AppColors.accentSoft(context),
                           fontWeight: FontWeight.bold,
                         ),
                   ).animate(delay: 100.ms).fadeIn().slideX(begin: -0.05),
@@ -84,15 +84,15 @@ class NewsDetailPage extends ConsumerWidget {
                     const SizedBox(height: 8),
                     Text(
                       item.sourceName,
-                      style: const TextStyle(color: AppColors.white38),
+                      style: TextStyle(color: AppColors.textMuted(context)),
                     ),
                   ],
                   const SizedBox(height: 20),
                   GlassCard(
                     child: Text(
                       item.body,
-                      style: const TextStyle(
-                        color: AppColors.white70,
+                      style: TextStyle(
+                        color: AppColors.textSecondary(context),
                         height: 1.6,
                         fontSize: 15,
                       ),

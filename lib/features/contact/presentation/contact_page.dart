@@ -29,7 +29,7 @@ class ContactPage extends ConsumerWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: contentAsync.when(
           loading: () => const Padding(
             padding: EdgeInsets.all(16),
@@ -51,20 +51,23 @@ class ContactPage extends ConsumerWidget {
                       Text(
                         AppConstants.companyName,
                         style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                              color: AppColors.goldLight,
+                              color: AppColors.accentSoft(context),
                               fontWeight: FontWeight.bold,
                             ),
                       ),
                       const SizedBox(height: 8),
                       Text(
                         contact.address,
-                        style: const TextStyle(color: AppColors.white70, height: 1.4),
+                        style: TextStyle(
+                          color: AppColors.textSecondary(context),
+                          height: 1.4,
+                        ),
                       ),
                       if (contact.hours != null) ...[
                         const SizedBox(height: 8),
                         Text(
                           contact.hours!,
-                          style: const TextStyle(color: AppColors.white38),
+                          style: TextStyle(color: AppColors.textMuted(context)),
                         ),
                       ],
                     ],
@@ -175,14 +178,17 @@ class _ContactButton extends StatelessWidget {
               children: [
                 Text(
                   label,
-                  style: const TextStyle(
-                    color: AppColors.goldLight,
+                  style: TextStyle(
+                    color: AppColors.accentSoft(context),
                     fontWeight: FontWeight.w600,
                   ),
                 ),
                 Text(
                   subtitle,
-                  style: const TextStyle(color: AppColors.white70, fontSize: 13),
+                  style: TextStyle(
+                    color: AppColors.textSecondary(context),
+                    fontSize: 13,
+                  ),
                 ),
               ],
             ),

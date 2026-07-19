@@ -142,12 +142,16 @@ class _PhAdjustmentCalculatorPageState
               ),
               validator: (v) => Validators.positiveNumber(v, field: 'Strength factor'),
             ),
-            const Padding(
-              padding: EdgeInsets.only(top: 8),
+            Padding(
+              padding: const EdgeInsets.only(top: 8),
               child: Text(
                 'Strength factor 1.0 = standard lab reagent strength. '
                 'Adjust up/down based on your plant reagent concentration.',
-                style: TextStyle(color: AppColors.white70, fontSize: 12, height: 1.35),
+                style: TextStyle(
+                  color: AppColors.textSecondary(context),
+                  fontSize: 12,
+                  height: 1.35,
+                ),
               ),
             ),
             calcCalculateButton(onPressed: _calculate),
@@ -157,7 +161,7 @@ class _PhAdjustmentCalculatorPageState
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Reagent volume', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

@@ -41,7 +41,7 @@ class ArticleDetailPage extends ConsumerWidget {
         ],
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: articleAsync.when(
           loading: () => const Padding(
             padding: EdgeInsets.all(16),
@@ -67,8 +67,8 @@ class ArticleDetailPage extends ConsumerWidget {
                 children: [
                   Text(
                     article.category,
-                    style: const TextStyle(
-                      color: AppColors.gold,
+                    style: TextStyle(
+                      color: AppColors.accent(context),
                       fontWeight: FontWeight.w600,
                     ),
                   ).animate().fadeIn(),
@@ -76,21 +76,21 @@ class ArticleDetailPage extends ConsumerWidget {
                   Text(
                     article.title,
                     style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                          color: AppColors.goldLight,
+                          color: AppColors.accentSoft(context),
                           fontWeight: FontWeight.bold,
                         ),
                   ).animate(delay: 100.ms).fadeIn().slideX(begin: -0.05),
                   const SizedBox(height: 8),
                   Text(
                     '${article.readMinutes} min read',
-                    style: const TextStyle(color: AppColors.white38),
+                    style: TextStyle(color: AppColors.textMuted(context)),
                   ),
                   const SizedBox(height: 20),
                   GlassCard(
                     child: Text(
                       article.content,
-                      style: const TextStyle(
-                        color: AppColors.white70,
+                      style: TextStyle(
+                        color: AppColors.textSecondary(context),
                         height: 1.6,
                         fontSize: 15,
                       ),

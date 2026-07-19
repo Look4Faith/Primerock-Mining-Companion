@@ -108,6 +108,7 @@ class _GoldValueCalculatorPageState
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'Weight unit',
               value: _weightUnit,
               units: kMassUnits,
@@ -136,7 +137,7 @@ class _GoldValueCalculatorPageState
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Estimated gold value', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

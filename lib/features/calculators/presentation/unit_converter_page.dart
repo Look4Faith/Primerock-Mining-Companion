@@ -137,7 +137,7 @@ class _UnitConverterPageState extends ConsumerState<UnitConverterPage> {
                   if (states.contains(WidgetState.selected)) {
                     return AppColors.black;
                   }
-                  return AppColors.white70;
+                  return AppColors.textSecondary(context);
                 }),
                 backgroundColor: WidgetStateProperty.resolveWith((states) {
                   if (states.contains(WidgetState.selected)) {
@@ -156,6 +156,7 @@ class _UnitConverterPageState extends ConsumerState<UnitConverterPage> {
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'From',
               value: _fromUnit,
               units: _activeUnits,
@@ -165,6 +166,7 @@ class _UnitConverterPageState extends ConsumerState<UnitConverterPage> {
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'To',
               value: _toUnit,
               units: _activeUnits,
@@ -179,7 +181,7 @@ class _UnitConverterPageState extends ConsumerState<UnitConverterPage> {
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Converted value', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

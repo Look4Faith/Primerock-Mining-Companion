@@ -6,6 +6,7 @@ import 'package:go_router/go_router.dart';
 import '../../../core/constants/app_constants.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../services/providers.dart';
+import '../../../widgets/app_page_background.dart';
 
 class SplashPage extends ConsumerStatefulWidget {
   const SplashPage({super.key});
@@ -32,36 +33,11 @@ class _SplashPageState extends ConsumerState<SplashPage> {
     return Scaffold(
       body: Container(
         width: double.infinity,
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-              padding: const EdgeInsets.all(20),
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: AppColors.gold, width: 2),
-                boxShadow: [
-                  BoxShadow(
-                    color: AppColors.gold.withValues(alpha: 0.2),
-                    blurRadius: 32,
-                  ),
-                ],
-              ),
-              child: ClipOval(
-                child: Image.asset(
-                  AppConstants.logoAsset,
-                  width: 120,
-                  height: 120,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => const Icon(
-                    Icons.diamond_outlined,
-                    size: 64,
-                    color: AppColors.gold,
-                  ),
-                ),
-              ),
-            )
+            BrandLogoBadge(assetPath: AppConstants.logoAsset, size: 120)
                 .animate()
                 .scale(
                   begin: const Offset(0.8, 0.8),
@@ -75,7 +51,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
               AppConstants.appName,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                    color: AppColors.goldLight,
+                    color: AppColors.accentSoft(context),
                     fontWeight: FontWeight.bold,
                   ),
             )
@@ -85,7 +61,7 @@ class _SplashPageState extends ConsumerState<SplashPage> {
             const SizedBox(height: 8),
             Text(
               AppConstants.companyName,
-              style: const TextStyle(color: AppColors.white70),
+              style: TextStyle(color: AppColors.textSecondary(context)),
             ).animate(delay: 450.ms).fadeIn(duration: 500.ms),
             const SizedBox(height: 48),
             const SizedBox(

@@ -15,9 +15,13 @@ class SkeletonLoader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final base = AppColors.elevated(context);
+    final highlight = AppColors.isDark(context)
+        ? AppColors.card
+        : AppColors.lightCard;
     return Shimmer.fromColors(
-      baseColor: AppColors.surfaceElevated,
-      highlightColor: AppColors.card,
+      baseColor: base,
+      highlightColor: highlight,
       child: Column(
         children: List.generate(
           count,
@@ -25,7 +29,7 @@ class SkeletonLoader extends StatelessWidget {
             height: height,
             margin: const EdgeInsets.only(bottom: 12),
             decoration: BoxDecoration(
-              color: AppColors.card,
+              color: base,
               borderRadius: BorderRadius.circular(16),
             ),
           ),

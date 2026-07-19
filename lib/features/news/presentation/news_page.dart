@@ -29,7 +29,7 @@ class NewsPage extends ConsumerWidget {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -142,8 +142,8 @@ class _NewsTile extends StatelessWidget {
               children: [
                 Text(
                   item.category,
-                  style: const TextStyle(
-                    color: AppColors.gold,
+                  style: TextStyle(
+                    color: AppColors.accent(context),
                     fontSize: 11,
                     fontWeight: FontWeight.w600,
                   ),
@@ -151,7 +151,10 @@ class _NewsTile extends StatelessWidget {
                 const Spacer(),
                 Text(
                   Formatters.dateShort(item.date),
-                  style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                  style: TextStyle(
+                    color: AppColors.textMuted(context),
+                    fontSize: 12,
+                  ),
                 ),
               ],
             ),
@@ -159,7 +162,7 @@ class _NewsTile extends StatelessWidget {
             Text(
               item.title,
               style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                    color: AppColors.goldLight,
+                    color: AppColors.accentSoft(context),
                     fontWeight: FontWeight.w600,
                   ),
             ),
@@ -168,13 +171,19 @@ class _NewsTile extends StatelessWidget {
               item.summary,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: const TextStyle(color: AppColors.white70, height: 1.35),
+              style: TextStyle(
+                color: AppColors.textSecondary(context),
+                height: 1.35,
+              ),
             ),
             if (item.sourceName.isNotEmpty) ...[
               const SizedBox(height: 8),
               Text(
                 item.sourceName,
-                style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                style: TextStyle(
+                  color: AppColors.textMuted(context),
+                  fontSize: 12,
+                ),
               ),
             ],
           ],

@@ -112,7 +112,7 @@ class _CyanideCalculatorPageState extends ConsumerState<CyanideCalculatorPage> {
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Cyanide dosage', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

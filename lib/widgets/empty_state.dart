@@ -26,20 +26,24 @@ class EmptyState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, size: 56, color: AppColors.gold.withValues(alpha: 0.6)),
+            Icon(
+              icon,
+              size: 56,
+              color: AppColors.accent(context).withValues(alpha: 0.7),
+            ),
             const SizedBox(height: 16),
             Text(
               title,
               textAlign: TextAlign.center,
               style: Theme.of(context).textTheme.titleLarge?.copyWith(
-                    color: AppColors.goldLight,
+                    color: AppColors.accentSoft(context),
                   ),
             ),
             const SizedBox(height: 8),
             Text(
               message,
               textAlign: TextAlign.center,
-              style: const TextStyle(color: AppColors.white70),
+              style: TextStyle(color: AppColors.textSecondary(context)),
             ),
             if (actionLabel != null && onAction != null) ...[
               const SizedBox(height: 20),

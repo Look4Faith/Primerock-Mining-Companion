@@ -42,7 +42,7 @@ class GoldPricesPage extends ConsumerWidget {
         ],
       ),
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: asyncData.when(
           loading: () => const Padding(
             padding: EdgeInsets.all(16),
@@ -82,9 +82,9 @@ class _GoldPricesBody extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
+                Text(
                   'Fidelity Gold Refinery — Fire Assay (Cash)',
-                  style: TextStyle(color: AppColors.white70),
+                  style: TextStyle(color: AppColors.textSecondary(context)),
                 ),
                 const SizedBox(height: 12),
                 Row(
@@ -108,13 +108,16 @@ class _GoldPricesBody extends StatelessWidget {
                   const SizedBox(height: 12),
                   Text(
                     'SG 90%+: ${Formatters.usd(sg90.usdPerGram)}/g · ${Formatters.usd(sg90.usdPerOz)}/oz',
-                    style: const TextStyle(color: AppColors.goldLight),
+                    style: TextStyle(color: AppColors.accentSoft(context)),
                   ),
                 ],
                 const SizedBox(height: 12),
                 Text(
                   'As of ${Formatters.date(latest.date)}',
-                  style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                  style: TextStyle(
+                    color: AppColors.textMuted(context),
+                    fontSize: 12,
+                  ),
                 ),
               ],
             ),
@@ -122,21 +125,27 @@ class _GoldPricesBody extends StatelessWidget {
         const SizedBox(height: 16),
         Text(
           'Source: ${dataset.source}',
-          style: const TextStyle(color: AppColors.white70, fontSize: 13),
+          style: TextStyle(
+            color: AppColors.textSecondary(context),
+            fontSize: 13,
+          ),
         ),
         if (dataset.lastUpdated.isNotEmpty) ...[
           const SizedBox(height: 4),
           Text(
             'Sheet date / last updated: ${dataset.lastUpdated}',
-            style: const TextStyle(color: AppColors.white38, fontSize: 12),
+            style: TextStyle(
+              color: AppColors.textMuted(context),
+              fontSize: 12,
+            ),
           ),
         ],
         if (dataset.paymentNote.isNotEmpty) ...[
           const SizedBox(height: 8),
           Text(
             dataset.paymentNote,
-            style: const TextStyle(
-              color: AppColors.white38,
+            style: TextStyle(
+              color: AppColors.textMuted(context),
               fontSize: 12,
               height: 1.4,
             ),
@@ -146,8 +155,8 @@ class _GoldPricesBody extends StatelessWidget {
           const SizedBox(height: 8),
           Text(
             dataset.note,
-            style: const TextStyle(
-              color: AppColors.white38,
+            style: TextStyle(
+              color: AppColors.textMuted(context),
               fontSize: 12,
               height: 1.4,
             ),
@@ -187,7 +196,7 @@ class _GoldPricesBody extends StatelessWidget {
                     Expanded(
                       child: Text(
                         c.label,
-                        style: const TextStyle(color: AppColors.white70),
+                        style: TextStyle(color: AppColors.textSecondary(context)),
                       ),
                     ),
                     Column(
@@ -195,15 +204,15 @@ class _GoldPricesBody extends StatelessWidget {
                       children: [
                         Text(
                           '${Formatters.usd(c.usdPerGram)}/g',
-                          style: const TextStyle(
-                            color: AppColors.goldLight,
+                          style: TextStyle(
+                            color: AppColors.accentSoft(context),
                             fontWeight: FontWeight.w600,
                           ),
                         ),
                         Text(
                           '${Formatters.usd(c.usdPerOz)}/oz',
-                          style: const TextStyle(
-                            color: AppColors.white38,
+                          style: TextStyle(
+                            color: AppColors.textMuted(context),
                             fontSize: 12,
                           ),
                         ),
@@ -248,15 +257,15 @@ class _GoldPricesBody extends StatelessWidget {
                     Expanded(
                       child: Text(
                         Formatters.date(p.date),
-                        style: const TextStyle(color: AppColors.white70),
+                        style: TextStyle(color: AppColors.textSecondary(context)),
                       ),
                     ),
                     Text(
                       fac == null
                           ? '—'
                           : '${Formatters.usd(fac.usdPerGram)}/g',
-                      style: const TextStyle(
-                        color: AppColors.goldLight,
+                      style: TextStyle(
+                        color: AppColors.accentSoft(context),
                         fontWeight: FontWeight.w600,
                       ),
                     ),
@@ -291,13 +300,16 @@ class _PriceChip extends StatelessWidget {
         children: [
           Text(
             label,
-            style: const TextStyle(color: AppColors.white38, fontSize: 12),
+            style: TextStyle(
+              color: AppColors.textMuted(context),
+              fontSize: 12,
+            ),
           ),
           const SizedBox(height: 4),
           Text(
             value,
             style: Theme.of(context).textTheme.titleMedium?.copyWith(
-                  color: AppColors.goldLight,
+                  color: AppColors.accentSoft(context),
                   fontWeight: FontWeight.bold,
                 ),
           ),
@@ -346,7 +358,10 @@ class _UsdLineChart extends StatelessWidget {
               reservedSize: 48,
               getTitlesWidget: (value, _) => Text(
                 '\$${value.toStringAsFixed(0)}',
-                style: const TextStyle(color: AppColors.white38, fontSize: 10),
+                style: TextStyle(
+                  color: AppColors.textMuted(context),
+                  fontSize: 10,
+                ),
               ),
             ),
           ),
@@ -360,7 +375,10 @@ class _UsdLineChart extends StatelessWidget {
                 if (i < 0 || i >= prices.length) return const SizedBox.shrink();
                 return Text(
                   DateFormat('d/M').format(prices[i].date),
-                  style: const TextStyle(color: AppColors.white38, fontSize: 10),
+                  style: TextStyle(
+                    color: AppColors.textMuted(context),
+                    fontSize: 10,
+                  ),
                 );
               },
             ),

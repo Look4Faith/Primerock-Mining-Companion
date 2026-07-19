@@ -118,6 +118,7 @@ class _RecoveryCalculatorPageState extends ConsumerState<RecoveryCalculatorPage>
             ),
             const SizedBox(height: 12),
             calcUnitDropdown(
+              context: context,
               label: 'Grade unit',
               value: _gradeUnit,
               units: kGradeUnits,
@@ -132,7 +133,7 @@ class _RecoveryCalculatorPageState extends ConsumerState<RecoveryCalculatorPage>
       result: _resultText == null
           ? null
           : ResultBanner(label: 'Metal recovery', value: _resultText!),
-      history: calcRecentHistory(entries: _history),
+      history: calcRecentHistory(context: context, entries: _history),
     );
   }
 }

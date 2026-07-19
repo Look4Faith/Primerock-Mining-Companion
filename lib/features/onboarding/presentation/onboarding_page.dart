@@ -76,7 +76,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
 
     return Scaffold(
       body: Container(
-        decoration: const BoxDecoration(gradient: AppColors.backgroundGradient),
+        decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
         child: SafeArea(
           child: Column(
             children: [
@@ -108,7 +108,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                             slide.title,
                             textAlign: TextAlign.center,
                             style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                                  color: AppColors.goldLight,
+                                  color: AppColors.accentSoft(context),
                                   fontWeight: FontWeight.bold,
                                 ),
                           ),
@@ -116,8 +116,8 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                           Text(
                             slide.body,
                             textAlign: TextAlign.center,
-                            style: const TextStyle(
-                              color: AppColors.white70,
+                            style: TextStyle(
+                              color: AppColors.textSecondary(context),
                               height: 1.5,
                               fontSize: 15,
                             ),
@@ -151,7 +151,7 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                     decoration: BoxDecoration(
                       color: _currentPage == i
                           ? AppColors.gold
-                          : AppColors.white38,
+                          : AppColors.textMuted(context),
                       borderRadius: BorderRadius.circular(4),
                     ),
                   ),
@@ -172,7 +172,10 @@ class _OnboardingPageState extends ConsumerState<OnboardingPage> {
                 padding: const EdgeInsets.only(bottom: 12),
                 child: Text(
                   AppConstants.companyName,
-                  style: const TextStyle(color: AppColors.white38, fontSize: 12),
+                  style: TextStyle(
+                    color: AppColors.textMuted(context),
+                    fontSize: 12,
+                  ),
                 ),
               ),
             ],
