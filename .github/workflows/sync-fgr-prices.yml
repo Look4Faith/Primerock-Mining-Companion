@@ -1,9 +1,13 @@
-name: Sync FGR gold prices
+name: Sync FGR prices & mining news
 
 on:
   schedule:
-    # Weekdays 06:30 UTC (~08:30 Zimbabwe)
+    # Weekdays ~08:30 Zimbabwe (FGR morning sheet)
     - cron: "30 6 * * 1-5"
+    # Weekdays ~14:30 Zimbabwe (afternoon refresh)
+    - cron: "30 12 * * 1-5"
+    # Daily news pass ~18:00 Zimbabwe (incl. weekends)
+    - cron: "0 16 * * *"
   workflow_dispatch:
 
 permissions:
@@ -22,19 +26,25 @@ jobs:
           python-version: "3.12"
 
       - name: Sync latest FGR sheet mirror
-        id: sync
+        id: prices
         continue-on-error: true
         run: python tools/sync_fgr_prices.py --latest
 
+      - name: Sync Zimbabwe mining news
+        id: news
+        continue-on-error: true
+        run: python tools/sync_mining_news.py --limit 14
+
       - name: Commit updated JSON if changed
-        if: steps.sync.outcome == 'success'
+        if: steps.prices.outcome == 'success' || steps.news.outcome == 'success'
         run: |
           git config user.name "primerock-bot"
           git config user.email "primerock-bot@users.noreply.github.com"
-          git add assets/data/gold_prices.json hosted-data/gold_prices.json
+          git add assets/data/gold_prices.json hosted-data/gold_prices.json \
+                  assets/data/news.json hosted-data/news.json
           if git diff --staged --quiet; then
-            echo "No price changes"
+            echo "No content changes"
           else
-            git commit -m "chore: sync FGR gold prices"
+            git commit -m "chore: sync FGR prices and mining news"
             git push
           fi

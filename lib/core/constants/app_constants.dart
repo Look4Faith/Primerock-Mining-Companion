@@ -44,5 +44,5 @@ class AppConstants {
   static const String contactMapsQuery =
       '3+Milton+Road+Fairbridge+Park+Mutare';
 
-  static const Duration remoteTimeout = Duration(seconds: 8);
+  static const Duration remoteTimeout = Duration(seconds: 15);
 }

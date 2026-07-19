@@ -6,14 +6,30 @@ class NewsService {
   NewsService(this._content);
 
   final OfflineContentService _content;
-  static const _cacheKey = 'news_v1';
+  static const cacheKey = 'news_v2';
 
-  Future<NewsDataset> load() async {
+  Future<NewsDataset> load({bool forceRefresh = true}) async {
     final json = await _content.loadJson(
-      cacheKey: _cacheKey,
+      cacheKey: cacheKey,
       assetPath: AppConstants.newsAsset,
       remotePath: AppConstants.remoteNewsPath,
+      forceRefresh: forceRefresh,
     );
     return NewsDataset.fromJson(json);
+  }
+
+  Future<({NewsDataset dataset, ContentSource source, DateTime? syncedAt})>
+      loadDetailed({bool forceRefresh = true}) async {
+    final result = await _content.loadJsonDetailed(
+      cacheKey: cacheKey,
+      assetPath: AppConstants.newsAsset,
+      remotePath: AppConstants.remoteNewsPath,
+      forceRefresh: forceRefresh,
+    );
+    return (
+      dataset: NewsDataset.fromJson(result.data),
+      source: result.source,
+      syncedAt: result.syncedAt,
+    );
   }
 }

@@ -5,11 +5,25 @@ import 'package:go_router/go_router.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/formatters.dart';
 import '../../../models/news_item.dart';
+import '../../../services/offline_content_service.dart';
 import '../../../widgets/empty_state.dart';
 import '../../../widgets/glass_card.dart';
 import '../../../widgets/section_header.dart';
 import '../../../widgets/skeleton_loader.dart';
 import '../providers/news_provider.dart';
+
+String _newsSyncLabel(NewsViewState state) {
+  final when = state.syncedAt;
+  final whenText = when == null ? 'not yet' : Formatters.date(when.toLocal());
+  switch (state.source) {
+    case ContentSource.remote:
+      return 'Live sync: $whenText · feed ${state.dataset.lastUpdated}';
+    case ContentSource.cache:
+      return 'Offline cache (last sync $whenText). Pull to refresh when online.';
+    case ContentSource.asset:
+      return 'Bundled copy — connect to Wi‑Fi/data and pull to refresh.';
+  }
+}
 
 class NewsPage extends ConsumerWidget {
   const NewsPage({super.key});
@@ -27,6 +41,13 @@ class NewsPage extends ConsumerWidget {
           icon: const Icon(Icons.arrow_back),
           onPressed: () => context.pop(),
         ),
+        actions: [
+          IconButton(
+            tooltip: 'Refresh',
+            icon: const Icon(Icons.refresh),
+            onPressed: () => ref.invalidate(newsProvider),
+          ),
+        ],
       ),
       body: Container(
         decoration: BoxDecoration(gradient: AppColors.pageGradient(context)),
@@ -50,35 +71,53 @@ class NewsPage extends ConsumerWidget {
                 height: 44,
                 child: Center(child: CircularProgressIndicator(strokeWidth: 2)),
               ),
-              error: (_, __) => const SizedBox.shrink(),
-              data: (dataset) => SizedBox(
-                height: 44,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8),
-                      child: FilterChip(
-                        label: const Text('All'),
-                        selected: selectedCategory == null,
-                        onSelected: (_) =>
-                            ref.read(newsCategoryProvider.notifier).state = null,
+              error: (_, _) => const SizedBox.shrink(),
+              data: (state) => Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 16),
+                    child: Text(
+                      _newsSyncLabel(state),
+                      style: TextStyle(
+                        color: AppColors.textMuted(context),
+                        fontSize: 12,
                       ),
                     ),
-                    ...dataset.categories.map(
-                      (cat) => Padding(
-                        padding: const EdgeInsets.only(right: 8),
-                        child: FilterChip(
-                          label: Text(cat),
-                          selected: selectedCategory == cat,
-                          onSelected: (_) =>
-                              ref.read(newsCategoryProvider.notifier).state = cat,
+                  ),
+                  const SizedBox(height: 8),
+                  SizedBox(
+                    height: 44,
+                    child: ListView(
+                      scrollDirection: Axis.horizontal,
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8),
+                          child: FilterChip(
+                            label: const Text('All'),
+                            selected: selectedCategory == null,
+                            onSelected: (_) => ref
+                                .read(newsCategoryProvider.notifier)
+                                .state = null,
+                          ),
                         ),
-                      ),
+                        ...state.dataset.categories.map(
+                          (cat) => Padding(
+                            padding: const EdgeInsets.only(right: 8),
+                            child: FilterChip(
+                              label: Text(cat),
+                              selected: selectedCategory == cat,
+                              onSelected: (_) => ref
+                                  .read(newsCategoryProvider.notifier)
+                                  .state = cat,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
             ),
             const Padding(

@@ -1,11 +1,29 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../../models/news_item.dart';
+import '../../../services/offline_content_service.dart';
 import '../../../services/providers.dart';
 
-final newsProvider = FutureProvider<NewsDataset>((ref) async {
+class NewsViewState {
+  const NewsViewState({
+    required this.dataset,
+    required this.source,
+    this.syncedAt,
+  });
+
+  final NewsDataset dataset;
+  final ContentSource source;
+  final DateTime? syncedAt;
+}
+
+final newsProvider = FutureProvider<NewsViewState>((ref) async {
   final service = ref.watch(newsServiceProvider);
-  return service.load();
+  final result = await service.loadDetailed(forceRefresh: true);
+  return NewsViewState(
+    dataset: result.dataset,
+    source: result.source,
+    syncedAt: result.syncedAt,
+  );
 });
 
 final newsSearchQueryProvider = StateProvider<String>((ref) => '');
@@ -17,8 +35,8 @@ final filteredNewsProvider = Provider<AsyncValue<List<NewsItem>>>((ref) {
   final query = ref.watch(newsSearchQueryProvider).toLowerCase().trim();
   final category = ref.watch(newsCategoryProvider);
 
-  return dataset.whenData((data) {
-    var list = List<NewsItem>.from(data.items)
+  return dataset.whenData((state) {
+    var list = List<NewsItem>.from(state.dataset.items)
       ..sort((a, b) => b.date.compareTo(a.date));
 
     if (category != null && category.isNotEmpty) {
@@ -38,10 +56,11 @@ final filteredNewsProvider = Provider<AsyncValue<List<NewsItem>>>((ref) {
   });
 });
 
-final newsItemByIdProvider = Provider.family<AsyncValue<NewsItem?>, String>((ref, id) {
+final newsItemByIdProvider =
+    Provider.family<AsyncValue<NewsItem?>, String>((ref, id) {
   final dataset = ref.watch(newsProvider);
-  return dataset.whenData((data) {
-    for (final item in data.items) {
+  return dataset.whenData((state) {
+    for (final item in state.dataset.items) {
       if (item.id == id) return item;
     }
     return null;

@@ -10,11 +10,27 @@ import '../../../core/constants/app_constants.dart';
 import '../../../core/theme/app_colors.dart';
 import '../../../core/utils/formatters.dart';
 import '../../../models/gold_price.dart';
+import '../../../services/offline_content_service.dart';
 import '../../../widgets/empty_state.dart';
 import '../../../widgets/glass_card.dart';
 import '../../../widgets/section_header.dart';
 import '../../../widgets/skeleton_loader.dart';
 import '../providers/gold_prices_provider.dart';
+
+String _syncLabel(GoldPricesViewState state) {
+  final when = state.syncedAt;
+  final whenText = when == null
+      ? 'not yet'
+      : Formatters.date(when.toLocal());
+  switch (state.source) {
+    case ContentSource.remote:
+      return 'Live sync: updated $whenText (Wi‑Fi/data)';
+    case ContentSource.cache:
+      return 'Offline cache (last sync $whenText). Pull to refresh when online.';
+    case ContentSource.asset:
+      return 'Bundled copy — connect to Wi‑Fi/data and pull to refresh.';
+  }
+}
 
 class GoldPricesPage extends ConsumerWidget {
   const GoldPricesPage({super.key});
@@ -31,6 +47,11 @@ class GoldPricesPage extends ConsumerWidget {
           onPressed: () => context.pop(),
         ),
         actions: [
+          IconButton(
+            tooltip: 'Refresh prices',
+            icon: const Icon(Icons.refresh),
+            onPressed: () => ref.invalidate(goldPricesProvider),
+          ),
           IconButton(
             tooltip: 'Open FGR website',
             icon: const Icon(Icons.open_in_new),
@@ -52,10 +73,10 @@ class GoldPricesPage extends ConsumerWidget {
             message: e.toString(),
             onRetry: () => ref.invalidate(goldPricesProvider),
           ),
-          data: (dataset) => RefreshIndicator(
+          data: (state) => RefreshIndicator(
             color: AppColors.gold,
             onRefresh: () async => ref.invalidate(goldPricesProvider),
-            child: _GoldPricesBody(dataset: dataset),
+            child: _GoldPricesBody(state: state),
           ),
         ),
       ),
@@ -64,12 +85,13 @@ class GoldPricesPage extends ConsumerWidget {
 }
 
 class _GoldPricesBody extends StatelessWidget {
-  const _GoldPricesBody({required this.dataset});
+  const _GoldPricesBody({required this.state});
 
-  final GoldPriceDataset dataset;
+  final GoldPricesViewState state;
 
   @override
   Widget build(BuildContext context) {
+    final dataset = state.dataset;
     final latest = dataset.latest;
     final fire = latest?.fireAssayCash;
     final sg90 = latest?.sg90;
@@ -130,10 +152,18 @@ class _GoldPricesBody extends StatelessWidget {
             fontSize: 13,
           ),
         ),
+        const SizedBox(height: 4),
+        Text(
+          _syncLabel(state),
+          style: TextStyle(
+            color: AppColors.textMuted(context),
+            fontSize: 12,
+          ),
+        ),
         if (dataset.lastUpdated.isNotEmpty) ...[
           const SizedBox(height: 4),
           Text(
-            'Sheet date / last updated: ${dataset.lastUpdated}',
+            'Sheet date: ${dataset.lastUpdated}',
             style: TextStyle(
               color: AppColors.textMuted(context),
               fontSize: 12,
