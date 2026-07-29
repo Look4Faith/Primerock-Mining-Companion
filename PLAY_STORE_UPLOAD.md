@@ -1,27 +1,26 @@
 # Play Store — Closed testing & release guide
 
-## New release (1.2.0)
+## New release (1.3.0)
 
 | Field | Value |
 |-------|--------|
 | **App name** | Primerock Mining Companion |
 | **Package** | `zw.co.primerock.primerock_mining_companion` |
-| **Version name** | 1.2.0 |
-| **Version code** | 3 |
-| **Release name** | `1.2.0 (3) — Live prices & news refresh` |
+| **Version name** | 1.3.0 |
+| **Version code** | 4 |
+| **Release name** | `1.3.0 (4) — Developer details & Paynow donate` |
 | **AAB path** | `build/app/outputs/bundle/release/app-release.aab` |
-| **Also copied to** | `dist/Primerock-Mining-Companion-1.2.0-3.aab` |
+| **Also copied to** | `dist/Primerock-Mining-Companion-1.3.0-4.aab` |
 
 ### Release notes (paste into Play Console)
 
 **English (en-US) — What’s new**
 
 ```
-• Gold prices and mining news now refresh automatically on Wi‑Fi or mobile data
-• Latest Fidelity (FGR) buying sheets when available
-• Fresh Zimbabwe mining headlines from Mining Zimbabwe
-• Pull down or tap refresh on Gold Prices and News to sync
-• Sync status shows when data is live vs offline cache
+• New Developer Details — see who builds the app
+• Contact / WhatsApp / email support from one place
+• Optional Donate via Paynow (PrimeRock Donations)
+• Also under Settings → Developer Details
 ```
 
 ### Upload steps

@@ -71,6 +71,12 @@ class HomePage extends ConsumerWidget {
         icon: Icons.contact_phone_outlined,
         route: '/contact',
       ),
+      _Feature(
+        title: 'Developer Details',
+        subtitle: 'Support, contact & donate',
+        icon: Icons.handshake_outlined,
+        route: '/developer',
+      ),
     ];
 
     return Scaffold(

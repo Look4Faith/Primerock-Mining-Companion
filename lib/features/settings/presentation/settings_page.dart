@@ -142,6 +142,25 @@ class _SettingsPageState extends ConsumerState<SettingsPage> {
               ),
             ),
             const SizedBox(height: 24),
+            const SectionHeader(title: 'Developer Details'),
+            GlassCard(
+              child: Column(
+                children: [
+                  ListTile(
+                    contentPadding: EdgeInsets.zero,
+                    leading: const Icon(Icons.handshake_outlined, color: AppColors.gold),
+                    title: const Text('Developer, support & donate'),
+                    subtitle: Text(
+                      '${AppConstants.developerCompany} · Paynow donations',
+                      style: TextStyle(color: AppColors.textSecondary(context)),
+                    ),
+                    trailing: const Icon(Icons.chevron_right, color: AppColors.gold),
+                    onTap: () => context.push('/developer'),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 24),
             const SectionHeader(title: 'About'),
             GlassCard(
               child: Column(

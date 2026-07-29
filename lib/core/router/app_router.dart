@@ -12,6 +12,7 @@ import '../../features/calculators/presentation/ph_adjustment_calculator_page.da
 import '../../features/calculators/presentation/recovery_calculator_page.dart';
 import '../../features/calculators/presentation/slurry_density_calculator_page.dart';
 import '../../features/calculators/presentation/unit_converter_page.dart';
+import '../../features/developer/presentation/developer_details_page.dart';
 import '../../features/contact/presentation/contact_page.dart';
 import '../../features/gold_prices/presentation/gold_prices_page.dart';
 import '../../features/home/presentation/home_page.dart';
@@ -138,6 +139,10 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(
         path: '/contact',
         builder: (context, state) => const ContactPage(),
+      ),
+      GoRoute(
+        path: '/developer',
+        builder: (context, state) => const DeveloperDetailsPage(),
       ),
       GoRoute(
         path: '/settings',

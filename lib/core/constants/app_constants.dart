@@ -5,7 +5,7 @@ class AppConstants {
 
   static const String appName = 'Primerock Mining Companion';
   static const String companyName = 'Primerock Solutions';
-  static const String appVersion = '1.2.0';
+  static const String appVersion = '1.3.0';
 
   /// Free GitHub raw host for offline-first refresh on Wi‑Fi/data.
   /// Falls back to bundled assets if unreachable (still $0/month).
@@ -43,6 +43,24 @@ class AppConstants {
       '3 Milton Road, Fairbridge Park, Mutare, Zimbabwe';
   static const String contactMapsQuery =
       '3+Milton+Road+Fairbridge+Park+Mutare';
+
+  /// Developer / publisher details (Settings → Developer Details).
+  static const String developerCompany = 'Leonom Technologies';
+  static const String developerProduct = 'Primerock Mining Companion';
+  static const String developerSupportEmail = contactEmail;
+  static const String developerSupportPhone = contactPhone;
+  static const String developerSupportWhatsApp = contactWhatsApp;
+
+  /// Paynow “PrimeRock Donations” custom payment link (public Integration ID only).
+  /// Do NOT put the Integration Key in the app — it must stay secret.
+  /// Override URL at build time if Paynow gives you a fixed share link:
+  ///   --dart-define=PAYNOW_DONATE_URL=https://www.paynow.co.zw/...
+  static const String paynowIntegrationId = '25926';
+  static const String paynowPaymentLinkName = 'PrimeRock Donations';
+  static const String paynowDonateUrlOverride = String.fromEnvironment(
+    'PAYNOW_DONATE_URL',
+    defaultValue: '',
+  );
 
   static const Duration remoteTimeout = Duration(seconds: 15);
 }

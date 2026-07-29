@@ -32,6 +32,11 @@ class ContactLauncher {
     await _launch(uri);
   }
 
+  static Future<void> openUrl(String url) async {
+    final uri = Uri.parse(url);
+    await _launch(uri);
+  }
+
   static Future<void> _launch(Uri uri) async {
     final ok = await launchUrl(uri, mode: LaunchMode.externalApplication);
     if (!ok) throw AppFailure('Could not open $uri');
